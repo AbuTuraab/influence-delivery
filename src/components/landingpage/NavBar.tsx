@@ -33,7 +33,7 @@ export default function Navbar() {
         <Flex h={16} alignItems="center" justifyContent="space-between">
           {/* Brand */}
           <Flex justifyContent="left" gap="10">
-            <Image src="src/assets/logo-influence-delivery.png" />
+            <Image src="/logo-influence-delivery.png" />
             <HStack gap="10">
               <Text color="white" width="">
                 Influenceurs
@@ -140,7 +140,7 @@ export default function Navbar() {
 //         <Flex h={16} alignItems="center" justifyContent="space-between">
 //           {/* Brand */}
 //           <Flex justifyContent="left" gap={{ base: 4, md: 10 }}>
-//             <Image src="src/assets/logo-influence-delivery.png" boxSize={{ base: "30px", md: "40px" }} />
+//             <Image src="/logo-influence-delivery.png" boxSize={{ base: "30px", md: "40px" }} />
 //             <HStack gap={{ base: 4, md: 10 }} display={{ base: "none", md: "flex" }}>
 //               <Text>Influenceurs</Text>
 //               <Text>Produits</Text>

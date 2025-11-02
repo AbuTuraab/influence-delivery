@@ -30,7 +30,7 @@ function LandingPage() {
         top="0px"
         left="0px"
         height="637px"
-        bgImage="url(src/assets/MaskGroup5.png)"
+        bgImage="url(/MaskGroup5.png)"
         
       >
         <Navbar />
@@ -185,7 +185,7 @@ function LandingPage() {
           <Card.Root
             w="600px"
             h="630px"
-            bg="transparent url(src/assets/fond-rose-jaune.png)no-repeat"
+            bg="transparent url(/fond-rose-jaune.png)no-repeat"
             borderRadius="45px 45px 0px 0px"
           border="none"
           >
@@ -193,7 +193,7 @@ function LandingPage() {
             w="600px"
             h="357px">
              <Image
-              src="src/assets/Group30493.png"
+              src="/Group30493.png"
               w="339.74px"
               h="283.81px"
               bg="transparent no-repeat"
@@ -241,7 +241,7 @@ function LandingPage() {
   <Card.Root
             w="600px"
             h="630px"
-            bg="transparent url(src/assets/fond-rose-violet.png)no-repeat"
+            bg="transparent url(/fond-rose-violet.png)no-repeat"
             borderRadius="45px 45px 0px 0px"
           border="none"
           >
@@ -249,7 +249,7 @@ function LandingPage() {
             w="600px"
             h="357px">
              <Image
-              src="src/assets/Group30657.png"
+              src="/Group30657.png"
               w="339.74px"
               h="283.81px"
               bg="transparent no-repeat"
@@ -339,7 +339,7 @@ function LandingPage() {
   opacity={1}
 >
   <Image
-    src="src/assets/Group30695.png"
+    src="/Group30695.png"
     w="56px"
     h="56px"
     mt="20px"
@@ -370,7 +370,7 @@ thématique, audience, type de contenu.
   opacity={1}
 >
   <Image
-    src="src/assets/Group30696.png"
+    src="/Group30696.png"
     w="56px"
     h="56px"
     mt="20px"
@@ -398,7 +398,7 @@ thématique, audience, type de contenu.
   opacity={1}
 >
   <Image
-    src="src/assets/Group30697.png"
+    src="/Group30697.png"
     w="56px"
     h="56px"
     mt="20px"
@@ -568,7 +568,7 @@ Services sponsorisés
           >
             <Image
             
-              src="src/assets/Group30782.png"
+              src="/Group30782.png"
             />
           </Box>
         </Flex>
@@ -692,7 +692,7 @@ Services sponsorisés
   display="flex"
   justifyContent="flex-start"
   alignItems="center"
-  bgImage="url('src/assets/MaskGroup17.png')"
+  bgImage="url('/MaskGroup17.png')"
   bgRepeat="no-repeat"
   bgSize="cover"
 >
@@ -800,7 +800,7 @@ Services sponsorisés
   <VStack align="flex-start">
     {/* Logo */}
     <Image
-      src="src/assets/Group30795.png"
+      src="/Group30795.png"
       alt="Footer Logo"
       w="288px"
       h="43px"
