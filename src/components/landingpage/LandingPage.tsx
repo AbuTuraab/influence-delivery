@@ -93,8 +93,16 @@ function LandingPage() {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            gap={4}
           >
 
+<Box   bgImage="url(/Union264.svg)" 
+  bgRepeat="no-repeat"
+  bgSize="cover"
+  height="15px"
+  width="15px">
+
+</Box>
             <Text  fontFamily="Helvetica Neue"
   fontSize="16px"
   lineHeight="19px"
@@ -120,8 +128,16 @@ function LandingPage() {
             display="flex"
             justifyContent="center"
             alignItems="center"
+            gap={4}
           >
 
+<Box   bgImage="url(/Propertyoutline.svg)" 
+  bgRepeat="no-repeat"
+  bgSize="cover"
+  height="15px"
+  width="15px">
+
+</Box>
             <Text  fontFamily="Helvetica Neue"
   fontSize="16px"
   lineHeight="19px"
