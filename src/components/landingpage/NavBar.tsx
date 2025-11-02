@@ -2,32 +2,13 @@ import {
   Box,
   Flex,
   HStack,
-  IconButton,
-  Button,
-  useDisclosure,
-  Stack,
-  Link,
+  
   Text,
 } from "@chakra-ui/react";
 import { CiHeart } from "react-icons/ci";
 import { Image } from "@chakra-ui/react";
 import { TbMoneybag } from "react-icons/tb";
-const Links = ["S’inscrire", "Se connecter"];
 
-const NavLink = ({ children }: { children: React.ReactNode }) => (
-  <Link
-    px={3}
-    py={2}
-    rounded="md"
-    _hover={{
-      textDecoration: "none",
-      bg: "gray.200",
-    }}
-    href={`#${children}`}
-  >
-    {children}
-  </Link>
-);
 
 export default function Navbar() {
   //   const { isOpen, onOpen, onClose } = useDisclosure();

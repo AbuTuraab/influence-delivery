@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Navbar from "./NavBar";
 import {
   Box,
@@ -6,25 +6,18 @@ import {
   Flex,
   Container,
   Stack,
-  For,
-  Spacer,
-  Grid,
+ 
   Card,
-  SimpleGrid,
-  Button,
+ 
   Image,
   HStack,
-  Badge,
-  Heading,
-  Group,
+  
   VStack,
   Link,
-  IconButton,
   Icon,
   AbsoluteCenter,
 } from "@chakra-ui/react";
 import { FaInstagram } from "react-icons/fa6";
-import { HiHeart } from "react-icons/hi";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa6";
