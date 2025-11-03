@@ -1,6 +1,5 @@
 #root {
- top: 0px;
-left: 0px;
+
 
  background: var(--unnamed-color-f6f6f7) 0% 0% no-repeat padding-box;
 background: #F6F6F7 0% 0% no-repeat padding-box;
@@ -8,3 +7,4 @@ opacity: 1;
 }
 
 
+@import "tailwindcss";

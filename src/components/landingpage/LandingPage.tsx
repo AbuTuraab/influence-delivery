@@ -19,11 +19,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
 
+
 function LandingPage() {
   return (
     <>
       <Box height="" bg="#F6F6F7" color={"black"}>
          <Navbar />
+    
         <Box
   bgImage="url(/MaskGroup5.png)"
   bgSize="cover"
@@ -64,7 +66,7 @@ function LandingPage() {
 
     <Stack
       direction={{ base: "column", md: "row" }}
-      spacing={4}
+     
       justify="center"
       align="center"
     >
@@ -238,8 +240,9 @@ function LandingPage() {
       </Card.Description>
 
       <Text color="black">
-        Créez votre vitrine et valorisez vos services professionnels...
-      </Text>
+        
+        Créez votre vitrine et valorisez vos services professionnels Proposez vos collaborations (stories, posts, vidéos…) Vendez les produits officiels de vous partenaires.
+           </Text>
 
       <Text
         fontWeight="medium"
@@ -543,16 +546,16 @@ function LandingPage() {
 
 
         <Box
-          maxW="1014px"
-          h="245px"
-          mx="auto"
-          display="flex"
-          justifyContent="flex-start"
-          alignItems="center"
-          bgImage="url('/MaskGroup17.png')"
-          bgRepeat="no-repeat"
-          bgSize="cover"
-          bgPos="cover"
+         maxW="1014px"
+  h={{ base: "320px", md: "245px" }}   // mobile taller
+  mx="auto"
+  display="flex"
+  justifyContent="flex-start"
+  alignItems="center"
+  bgImage="url('/MaskGroup17.png')"
+  bgRepeat="no-repeat"
+  bgSize={{ base: "cover", md: "cover" }}  // mobile use contain
+  bgPos="center"  // good default
         >
           <Box
             maxW="400px"
@@ -629,7 +632,7 @@ function LandingPage() {
               </Box>
             </Flex>
           </Box>
-        </Box>
+        </Box> 
 
        
 
