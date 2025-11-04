@@ -190,9 +190,9 @@ function LandingPage() {
       </Card.Description>
 
       <Text color="black">
-        Découvrez des influenceurs pertinents pour votre audience
-        Collaborez sur des campagnes sponsorisées sur mesure
-        Accédez aux produits officiels de vos influenceurs préférés
+          <Text as="span" color="#E13E85">Découvrez des influenceurs</Text> pertinents pour votre audience
+        Collaborez sur des  <Text as="span" color="#E13E85">campagnes sponsorisées</Text> sur mesure
+        Accédez aux  <Text as="span" color="#E13E85">produits officiels</Text> de vos influenceurs préférés
       </Text>
 
       <Text
@@ -241,7 +241,9 @@ function LandingPage() {
 
       <Text color="black">
         
-        Créez votre vitrine et valorisez vos services professionnels Proposez vos collaborations (stories, posts, vidéos…) Vendez les produits officiels de vous partenaires.
+        <Text as ="span" color="#7344E4">Créez votre vitrine </Text>  
+         et valorisez vos services professionnels <Text as="span" color="#7344E4">Proposez vos collaborations
+          </Text>  (stories, posts, vidéos…) <Text as="span" color="#7344E4">Vendez les produits officiels     </Text>  de vous partenaires.
            </Text>
 
       <Text

@@ -149,8 +149,8 @@ const MobileDrawer = () => {
   return (
     <Drawer.Root open={open} onOpenChange={onToggle} size="full">
       <Drawer.Trigger asChild>
-        <Button variant="outline" size="sm"  py={5}>
-          <Icon color="#7344E4">
+        <Button variant="outline" size="sm"  py={5} colorPalette="#7344E4" >
+          <Icon color="#7344E4" colorPalette="#7344E4">
             <Menu />
           </Icon>
         </Button>
