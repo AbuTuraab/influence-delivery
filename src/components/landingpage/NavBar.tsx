@@ -31,7 +31,7 @@ import { TbMoneybag } from "react-icons/tb";
     
       {/* Or use an actual image */}
       {/* <Image src="/logo.png" alt="Logo" height="40px" /> */}
-       <Image src="/src/assets/logo-influence-delivery.png" />
+       <Image src="/logo-influence-delivery.png" />
     </Box>
   );
 };
