@@ -253,7 +253,7 @@ export default function Navbar() {
               </Text>
             </HStack>
           </Flex>
-          <Box display={{ base:"block", md: "none" }}  >
+          <Box display={{ base:"block", md: "none" }} bgColor="black" >
         <MobileDrawer />
       </Box>
         </Flex>  
