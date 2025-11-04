@@ -23,7 +23,7 @@ import { FaPlus } from "react-icons/fa6";
 function LandingPage() {
   return (
     <>
-      <Box height="" bg="#F6F6F7" color={"black"}>
+      <Box height="" bg="#F6F6F7" color={"black"} mt="-66px">
          <Navbar />
     
         <Box
@@ -545,7 +545,7 @@ function LandingPage() {
 </Container>
 
 
-        <Box
+        {/* <Box
          maxW="1014px"
   h={{ base: "320px", md: "245px" }}   // mobile taller
   mx="auto"
@@ -632,9 +632,125 @@ function LandingPage() {
               </Box>
             </Flex>
           </Box>
-        </Box> 
+        </Box>  */}
 
        
+
+
+
+
+
+
+
+
+
+<Box
+  position="relative"
+  maxW="1014px"
+  mx={{base:"auto"}}
+  h={{ base: "420px", md: "320px" }}
+  w="97%"
+  overflow="hidden"
+  borderRadius="20px"
+>
+  {/* background image */}
+  <Image
+    src="/MaskGroup17.png"
+    alt="background"
+    position="absolute"
+    inset="0"
+    w="100%"
+    h="100%"
+    objectFit="cover"
+    zIndex={0}
+  />
+
+  {/* text container */}
+  <Box
+    position="relative"
+    zIndex={1}
+    color="white"
+    p={{ base: 6, md: 8 }}
+    maxW={{ base: "100%", md: "450px" }}
+    ml={{ base: "0px", md: "30px" }}
+    textAlign={{ base: "center", md: "left" }}
+    mt={{ base: "60px", md: "0px" }}   // move text down on mobile
+  >
+    <Text
+      fontSize={{ base: "32px", md: "32px" }}
+      lineHeight={{ base: "36px", md: "36px" }}
+      fontWeight="bold"
+      fontFamily="Helvetica Neue"
+      mb="10px"
+    >
+      Commencez dès maintenant
+    </Text>
+
+    <Text
+      fontSize={{ base: "16px", md: "18px" }}
+      lineHeight={{ base: "22px", md: "26px" }}
+      fontFamily="Helvetica Neue"
+      mb="20px"
+    >
+      Rejoignez une communauté de marques et de créateurs qui font de
+      l’influence un vrai levier de croissance.
+    </Text>
+
+    <Flex
+  direction={{ base: "column", md: "row" }}   // <-- stack on mobile
+  align={{ base: "center", md: "flex-start" }} // <-- center on mobile
+  gap={4}
+>
+  <Box
+    px="20px"
+    py="10px"
+    border="0.2px solid #FFFFFF"
+    bg="#FFFFFF33"
+    borderRadius="18px"
+    fontSize="14px"
+    w="196px"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+  >
+    <Text fontSize="16px" lineHeight="19px" fontWeight="bold" color="white" whiteSpace="nowrap">
+      Découvrir les créateurs
+    </Text>
+  </Box>
+
+  <Box
+    px="20px"
+    py="10px"
+    border="0.2px solid #FFFFFF"
+    bg="#FFFFFF33"
+    borderRadius="18px"
+    w="196px"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+  >
+    <Text fontSize="16px" lineHeight="19px" fontWeight="bold" color="white" whiteSpace="nowrap">
+      Créer ma boutique
+    </Text>
+  </Box>
+</Flex>
+
+  </Box>
+</Box>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <Box
