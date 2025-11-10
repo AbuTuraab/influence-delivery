@@ -80,7 +80,7 @@ export default function Profile2Page() {
     <>
       <Box mt={{ base: "-100px", md: "100px", lg: "40px" }}
         ml={{ base: "70px", md: "100px", lg: "75px" }}
-        boxShadow="0px 8px 16px #0000000F">
+        boxShadow="0px 8px 16px #0000000F" bgColor="#F2EDFC">
 
 
         <HStack>
@@ -108,30 +108,30 @@ export default function Profile2Page() {
 
 
 
-            <Box w="100%">
               <Box
-                bg="black"
+          
                 borderRadius="24px"
                 boxShadow="0px 8px 16px #0000000F"
                 overflow="hidden"
-                w="100%"
+               
               >
-                <Flex gap={0} w="100%">
+                <Flex gap="5px">
                   <Image
                     src="/src/assets/215.png"
                     flex="1"
                     h="400px"
                     objectFit="cover"
-                    borderRadius="0"
+                    borderRadius="32px 0px 0px 32px"
+                  
                   />
 
-                  <Flex wrap="wrap" gap={0} flex="1">
-                    <Image src="/src/assets/215.png" w="50%" h="200px" />
-                    <Image src="/src/assets/215.png" w="50%" h="200px" />
-                    <Image src="/src/assets/215.png" w="50%" h="200px" />
+                  <Flex wrap="wrap"  flex="1">
+                    <Image src="/src/assets/215.png" w="50%" h="200px" pb="2.5px" />
+                    <Image src="/src/assets/215.png" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
+                    <Image src="/src/assets/215.png" w="50%" h="200px" pt="2.5px" />
 
-                    <Box position="relative" w="50%" h="200px">
-                      <Image src="/src/assets/215.png" w="100%" h="100%" />
+                    <Box position="relative" w="50%" h="200px" pl="5px" pt="2.5px">
+                      <Image src="/src/assets/215.png" w="100%" h="100%"/>
 
                       <Box
                         position="absolute"
@@ -145,7 +145,7 @@ export default function Profile2Page() {
                         alignItems="center"
                         justifyContent="center"
                       >
-                        <Text color="black" fontSize="12px" fontWeight="500">
+                        <Text color="black" fontSize="12px" fontWeight="500" borderRadius="0px 0px 32px 0px">
                           Voir tout
                         </Text>
                       </Box>
@@ -154,7 +154,7 @@ export default function Profile2Page() {
                 </Flex>
               </Box>
 
-            </Box>
+          
 
 
             {/* profile bar */}
@@ -538,7 +538,7 @@ export default function Profile2Page() {
 
 
         <HStack align="flex-start" mt={8} >
-          <Box h="546px" w="391px" bgColor={"white"} borderRadius="32px" >
+          <Box h="auto" w="391px" bgColor={"white"} borderRadius="32px" >
             <HStack alignItems={"center"} justifyContent={"center"}>
               <Image src="src/assets/star.svg" w="80px" h="80px" />
               <Text fontFamily="Helvetica Neue"
@@ -676,7 +676,7 @@ export default function Profile2Page() {
 
 
 
-          <Box color="black" w="808px" h="543px" bgColor={"white"} borderRadius="32px"   >
+          <Box color="black" w="808px" h="auto" bgColor={"white"} borderRadius="32px"   >
             <VStack>
               <Box h="468px" borderRadius="32px" bg="#FFFFFF" p={5} my="10px" >
                 <HStack >
