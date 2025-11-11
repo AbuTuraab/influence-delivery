@@ -11,7 +11,7 @@ export default function Artboard() {
       >
         <HStack>
           <Image
-            src="/src/assets/home-hashtag.png"
+            src="/assets/home-hashtag.png"
             w="12px"
             h="12px"
             color={"black"}
@@ -23,7 +23,7 @@ export default function Artboard() {
         </HStack>
 
         <HStack align="flex-start" mt={8} >
-          <Image src="/src/assets/215.png" w="703px" h="703px" />
+          <Image src="/assets/215.png" w="703px" h="703px" />
           <Box color="black" position={"relative"} >
             <VStack>
               <Box w="496px" h="468px"  p={4} bg="#FFFFFF"
@@ -39,7 +39,7 @@ export default function Artboard() {
                </HStack>
 
                 <Image
-                  src="/src/assets/Group30.png"
+                  src="/assets/Group30.png"
                   w="43px"
                   h="43px"
                   ml="auto" // <— pushes it to the right
@@ -150,10 +150,10 @@ zIndex={0}
   <Grid templateColumns="repeat(2, 1fr)" gap="10px" mt="10px">
   
     <SimpleGrid columns={2} gap="10px">
-      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
-      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
-      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px"  />
-      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px"  />
+      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
     </SimpleGrid>
 
 </Grid>

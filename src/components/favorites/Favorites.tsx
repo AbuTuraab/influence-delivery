@@ -121,7 +121,7 @@ export default function Favorites(){
   {/* Image + top section */}
   <Box position="relative">
     <Image
-      src="/src/assets/C2.png"
+      src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -165,7 +165,7 @@ export default function Favorites(){
         </VStack>
 
         <HStack>
-          <Image src="/src/assets/star.svg" w="12.17px" h="12.16px" />
+          <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
           <Text fontWeight="600">4.9</Text>
         </HStack>
       </HStack>
@@ -176,7 +176,7 @@ export default function Favorites(){
   <VStack py="16px" >
       
      <Image 
-      src="/src/assets/speaker.svg"
+      src="/assets/speaker.svg"
     w="37px"
     h="23px"
   
@@ -207,7 +207,7 @@ export default function Favorites(){
   {/* Image + top section */}
   <Box position="relative">
     <Image
-      src="/src/assets/C2.png"
+      src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -251,7 +251,7 @@ export default function Favorites(){
         </VStack>
 
         <HStack>
-          <Image src="/src/assets/star.svg" w="12.17px" h="12.16px" />
+          <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
           <Text fontWeight="600">4.9</Text>
         </HStack>
       </HStack>
@@ -262,7 +262,7 @@ export default function Favorites(){
   <VStack py="16px" >
       
      <Image 
-      src="/src/assets/speaker.svg"
+      src="/assets/speaker.svg"
     w="37px"
     h="23px"
   

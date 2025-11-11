@@ -26,7 +26,7 @@ function BoutiqueCard() {
       {/* image area */}
       <Box >
         <Image
-          src="/src/assets/C2.png"
+          src="/assets/C2.png"
           w="352px"
           h="117px"
           objectFit="cover"
@@ -42,7 +42,7 @@ function BoutiqueCard() {
           </Text>
 
           <HStack>
-            <Image src="/src/assets/star.svg" w="12px" h="12px" />
+            <Image src="/assets/star.svg" w="12px" h="12px" />
             <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">5.0</Text>
           </HStack>
         </HStack>
@@ -85,7 +85,7 @@ export default function Profile2Page() {
 
         <HStack>
           <Image
-            src="/src/assets/home-hashtag.png"
+            src="/assets/home-hashtag.png"
             w="12px"
             h="12px"
             color={"black"}
@@ -120,7 +120,7 @@ export default function Profile2Page() {
               >
                 <Flex gap="5px"   direction={{ base: "column", lg: "row" }}  >
                   <Image
-                    src="/src/assets/215.png"
+                    src="/assets/215.png"
                     flex="1"
                     h="400px"
                     objectFit="cover"
@@ -129,12 +129,12 @@ export default function Profile2Page() {
                   />
 
                   <Flex wrap="wrap"  flex="1">
-                    <Image src="/src/assets/215.png" w="50%" h="200px" pb="2.5px" />
-                    <Image src="/src/assets/215.png" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
-                    <Image src="/src/assets/215.png" w="50%" h="200px" pt="2.5px" />
+                    <Image src="/assets/215.png" w="50%" h="200px" pb="2.5px" />
+                    <Image src="/assets/215.png" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
+                    <Image src="/assets/215.png" w="50%" h="200px" pt="2.5px" />
 
                     <Box position="relative" w="50%" h="200px" pl="5px" pt="2.5px">
-                      <Image src="/src/assets/215.png" w="100%" h="100%"/>
+                      <Image src="/assets/215.png" w="100%" h="100%"/>
 
                       <Box
                         position="absolute"

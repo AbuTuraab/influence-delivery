@@ -44,7 +44,7 @@ export default function Products() {
 
 
                 <Image
-                  src="/src/assets/home-hashtag.svg"
+                  src="/assets/home-hashtag.svg"
                   w="12px"
                   h="12px"
 
@@ -248,7 +248,7 @@ export default function Products() {
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -273,7 +273,7 @@ export default function Products() {
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -318,7 +318,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>
@@ -331,7 +331,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -356,7 +356,7 @@ opacity={1}>
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -401,7 +401,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>
@@ -414,7 +414,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -439,7 +439,7 @@ opacity={1}>
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -483,7 +483,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>
@@ -496,7 +496,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -521,7 +521,7 @@ opacity={1}>
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -566,7 +566,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>
@@ -579,7 +579,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -604,7 +604,7 @@ opacity={1}>
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -649,7 +649,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>
@@ -662,7 +662,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -687,7 +687,7 @@ opacity={1}>
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -731,7 +731,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>
@@ -744,7 +744,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/src/assets/C2.png"
+    src="/assets/C2.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -769,7 +769,7 @@ opacity={1}>
               </Text>
 
               <HStack >
-                <Image src="/src/assets/star.svg"   w="12px"
+                <Image src="/assets/star.svg"   w="12px"
   h="12px"
   bgImage="url('/img/star.png')"
   bgSize="cover"
@@ -814,7 +814,7 @@ opacity={1}>
                 justifyContent="center"
                 bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
               >
-                <Image src="/src/assets/icone-sac@2x.png" w="18px" h="18px"/>
+                <Image src="/assets/icone-sac@2x.png" w="18px" h="18px"/>
               </Box>
             </HStack>
           </VStack>

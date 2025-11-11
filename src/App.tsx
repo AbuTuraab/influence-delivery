@@ -35,7 +35,6 @@ function App() {
 <Route path='/favorites' element={<Favorites />} />
 <Route path='/filter' element={<Filter />} />
 <Route path='/profile2' element={<Profile2Page />} />
-
 <Route path='/profile6' element={<Profile6 />} />
 </Routes>
  
