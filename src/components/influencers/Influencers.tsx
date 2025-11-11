@@ -44,7 +44,7 @@ export default function Influenceurs() {
 
 
                 <Image
-                  src="/assets/home-hashtag.svg"
+                  src="/home-hashtag.svg"
                   w="12px"
                   h="12px"
 
@@ -265,7 +265,7 @@ export default function Influenceurs() {
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -309,7 +309,7 @@ export default function Influenceurs() {
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -320,7 +320,7 @@ export default function Influenceurs() {
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         
@@ -348,7 +348,7 @@ export default function Influenceurs() {
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -392,7 +392,7 @@ export default function Influenceurs() {
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -403,7 +403,7 @@ export default function Influenceurs() {
         <VStack py="16px" >
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         

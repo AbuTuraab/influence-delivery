@@ -181,7 +181,7 @@ export default function Navbar() {
         <Flex align="center" justify="space-between">
           <Flex justifyContent="left" gap="10">
            
-            <Link href="#">
+            <Link href="/">
              <Logo />
             </Link>
             <HStack gap="10" display={{ base: "none", md: "flex" }}>

@@ -42,7 +42,7 @@ export default function Profile6() {
 
 
                                 <Image
-                                    src="/assets/home-hashtag.svg"
+                                    src="/home-hashtag.svg"
                                     w="12px"
                                     h="12px"
 color={"black"}
@@ -74,7 +74,7 @@ color={"black"}
 
 
                <Box
-                    bgImage="url(/assets/image-proxy.png)"
+                    bgImage="url(/image-proxy.png)"
                     bgSize="cover"
                     bgPos="center"
                     bgRepeat="no-repeat"
@@ -107,7 +107,7 @@ color={"black"}
 
   {/* app image left */}
   <Image
-    src="/assets/curology.png"
+    src="/curology.png"
     alt="Curology"
     w="99px"
     h="99px"
@@ -134,7 +134,7 @@ color={"black"}
 
       <Text fontWeight="bold" fontSize="lg">Curology</Text>
         <HStack>
-            <Image src="/assets/star.svg" w="12px" h="12px" />
+            <Image src="/star.svg" w="12px" h="12px" />
             <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">5.0</Text>
           </HStack>
  </Flex>
@@ -165,7 +165,7 @@ color={"black"}
         <VStack >
         
             <Text fontWeight="bold" fontSize="sm">4.5</Text>
-        <Image src="/assets/star.svg" w="12px" h="12px" />
+        <Image src="/star.svg" w="12px" h="12px" />
         </VStack>
       </Flex>
 
@@ -333,7 +333,7 @@ mb="20px"
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -377,7 +377,7 @@ mb="20px"
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -388,7 +388,7 @@ mb="20px"
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         
@@ -417,7 +417,7 @@ mb="20px"
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -461,7 +461,7 @@ mb="20px"
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -472,7 +472,7 @@ mb="20px"
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         
@@ -499,7 +499,7 @@ mb="20px"
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -543,7 +543,7 @@ mb="20px"
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -554,7 +554,7 @@ mb="20px"
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         
@@ -580,7 +580,7 @@ mb="20px"
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -624,7 +624,7 @@ mb="20px"
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -635,7 +635,7 @@ mb="20px"
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         
@@ -661,7 +661,7 @@ mb="20px"
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -705,7 +705,7 @@ mb="20px"
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -716,7 +716,7 @@ mb="20px"
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         
@@ -742,7 +742,7 @@ mb="20px"
         {/* Image + top section */}
         <Box position="relative">
           <Image
-            src="/assets/C2.png"
+            src="/C2.png"
           w="268px"
           h="268px"
           objectFit="cover"
@@ -786,7 +786,7 @@ mb="20px"
               </VStack>
       
               <HStack>
-                <Image src="/assets/star.svg" w="12.17px" h="12.16px" />
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
                 <Text fontWeight="600">4.9</Text>
               </HStack>
             </HStack>
@@ -797,7 +797,7 @@ mb="20px"
         <VStack py="16px">
             
            <Image 
-            src="/assets/speaker.svg"
+            src="/speaker.svg"
           w="37px"
           h="23px"
         

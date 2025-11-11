@@ -26,7 +26,7 @@ function BoutiqueCard() {
       {/* image area */}
       <Box >
         <Image
-          src="/assets/C2.png"
+          src="/C2.png"
           w="352px"
           h="117px"
           objectFit="cover"
@@ -42,7 +42,7 @@ function BoutiqueCard() {
           </Text>
 
           <HStack>
-            <Image src="/assets/star.svg" w="12px" h="12px" />
+            <Image src="/star.svg" w="12px" h="12px" />
             <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">5.0</Text>
           </HStack>
         </HStack>
@@ -66,7 +66,7 @@ export default function Profile2Page() {
     { icon: <FaTiktok size={26} />, title: "Vidéo TikTok", price: "260€" },
     { icon: <CiYoutube size={26} />, title: "Short YouTube", price: "310€" },
     { icon: <FaFacebook size={26} />, title: "Post Facebook", price: "195€" },
-    { icon: <Image src="src/assets/unbox.svg" />, title: "Vidéo unboxing", price: "325€" },
+    { icon: <Image src="src/unbox.svg" />, title: "Vidéo unboxing", price: "325€" },
   ];
 
   const tabs = [
@@ -85,7 +85,7 @@ export default function Profile2Page() {
 
         <HStack>
           <Image
-            src="/assets/home-hashtag.png"
+            src="/home-hashtag.png"
             w="12px"
             h="12px"
             color={"black"}
@@ -120,7 +120,7 @@ export default function Profile2Page() {
               >
                 <Flex gap="5px"   direction={{ base: "column", lg: "row" }}  >
                   <Image
-                    src="/assets/215.png"
+                    src="/215.png"
                     flex="1"
                     h="400px"
                     objectFit="cover"
@@ -129,12 +129,12 @@ export default function Profile2Page() {
                   />
 
                   <Flex wrap="wrap"  flex="1">
-                    <Image src="/assets/215.png" w="50%" h="200px" pb="2.5px" />
-                    <Image src="/assets/215.png" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
-                    <Image src="/assets/215.png" w="50%" h="200px" pt="2.5px" />
+                    <Image src="/215.png" w="50%" h="200px" pb="2.5px" />
+                    <Image src="/215.png" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
+                    <Image src="/215.png" w="50%" h="200px" pt="2.5px" />
 
                     <Box position="relative" w="50%" h="200px" pl="5px" pt="2.5px">
-                      <Image src="/assets/215.png" w="100%" h="100%"/>
+                      <Image src="/215.png" w="100%" h="100%"/>
 
                       <Box
                         position="absolute"
@@ -283,7 +283,7 @@ export default function Profile2Page() {
                         w="60px"
                       >
 
-                        <Image src="src/assets/icone-sac.png" w="18px" h="18px" />
+                        <Image src="src/icone-sac.png" w="18px" h="18px" />
                       </Flex>
                     </HStack>
                   </Flex>
@@ -386,7 +386,7 @@ export default function Profile2Page() {
                   >
                     <VStack  textAlign="center">
                       <Image
-                        src="src/assets/logo-tiktok-noir.svg"
+                        src="src/logo-tiktok-noir.svg"
                         boxSize="24px"
                         alt="TikTok"
                       />
@@ -430,7 +430,7 @@ export default function Profile2Page() {
                   >
                     <VStack  textAlign="center">
                       <Image
-                        src="src/assets/logo-instagram-noir.svg"
+                        src="src/logo-instagram-noir.svg"
                         boxSize="24px"
                         alt="Instagram"
                       />
@@ -487,7 +487,7 @@ export default function Profile2Page() {
             </Box>
             <Box>
               <VStack color="black" textAlign={"center"} pt={3}>
-                <Image src="src/assets/union.svg" h="17px" w="17px" />
+                <Image src="src/union.svg" h="17px" w="17px" />
                 <Text fontFamily="Helvetica Neue"
                   fontWeight="bold"
                   fontSize="16px"
@@ -543,7 +543,7 @@ export default function Profile2Page() {
         <HStack align="flex-start" mt={8} >
           <Box h="auto" w="391px" bgColor={"white"} borderRadius="32px" >
             <HStack alignItems={"center"} justifyContent={"center"}>
-              <Image src="src/assets/star.svg" w="80px" h="80px" />
+              <Image src="src/star.svg" w="80px" h="80px" />
               <Text fontFamily="Helvetica Neue"
                 fontWeight="bold"
                 fontSize="112px"
@@ -556,13 +556,13 @@ export default function Profile2Page() {
             <HStack alignItems={"center"} justifyContent={"space-around"}
             >
               <HStack >
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black" textAlign="center"><Text>100%</Text>
                   <Text>Satisfaction</Text>
                 </Box>
               </HStack>
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black" textAlign="center"><Text>Excellente</Text>
                   <Text>Qualité globale</Text>
                 </Box>
@@ -581,11 +581,11 @@ export default function Profile2Page() {
 
                     <Text>5</Text>
                   </Box>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                 </HStack>
-                <Image src="src/assets/line.png" w="160px" h="3px" />
+                <Image src="src/line.png" w="160px" h="3px" />
                 <HStack>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                   <Box color="black" textAlign="center">
 
                     <Text>2 (100%)</Text>
@@ -600,11 +600,11 @@ export default function Profile2Page() {
 
                     <Text>5</Text>
                   </Box>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                 </HStack>
-                <Image src="src/assets/line.png" w="160px" h="3px" />
+                <Image src="src/line.png" w="160px" h="3px" />
                 <HStack>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                   <Box color="black" textAlign="center">
 
                     <Text>2 (100%)</Text>
@@ -619,11 +619,11 @@ export default function Profile2Page() {
 
                     <Text>5</Text>
                   </Box>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                 </HStack>
-                <Image src="src/assets/line.png" w="160px" h="3px" />
+                <Image src="src/line.png" w="160px" h="3px" />
                 <HStack>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                   <Box color="black" textAlign="center">
 
                     <Text>2 (100%)</Text>
@@ -638,11 +638,11 @@ export default function Profile2Page() {
 
                     <Text>5</Text>
                   </Box>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                 </HStack>
-                <Image src="src/assets/line.png" w="160px" h="3px" />
+                <Image src="src/line.png" w="160px" h="3px" />
                 <HStack>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                   <Box color="black" textAlign="center">
 
                     <Text>2 (100%)</Text>
@@ -657,11 +657,11 @@ export default function Profile2Page() {
 
                     <Text>5</Text>
                   </Box>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                 </HStack>
-                <Image src="src/assets/line.png" w="160px" h="3px" color="grey" />
+                <Image src="src/line.png" w="160px" h="3px" color="grey" />
                 <HStack>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                   <Box color="black" textAlign="center">
 
                     <Text>2 (100%)</Text>
@@ -691,22 +691,22 @@ export default function Profile2Page() {
                   <HStack ml="auto" // <— pushes it to the right
                     display="flex">
                     <Text>Les plus récents</Text>
-                    <Image src="src/assets/fleche.png" w="16px" h="10px" />
+                    <Image src="src/fleche.png" w="16px" h="10px" />
                   </HStack>
                 </HStack>
                 <Box border="2px solid #ABACAD" borderRadius="16px" py="20px" px="10px" my="10px" >
 
                   <HStack textAlign={"center"}>
-                    <Image src="src/assets/profilepic.png" w="40px" h="40px" />
+                    <Image src="src/profilepic.png" w="40px" h="40px" />
 
 
                     <Box>
                       <HStack> <Text>Aline Dupont ·</Text>
-                        <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                        <Image src="src/etoile.svg" w="13px" h="13px" />
                         <Text>5.0</Text>
                       </HStack>
                       <HStack>
-                        <Image src="src/assets/localisation.png" w="13px" h="13px" />
+                        <Image src="src/localisation.png" w="13px" h="13px" />
                         <Text>24 Oct. - 14:30</Text>
                       </HStack>
                     </Box>
@@ -721,12 +721,12 @@ export default function Profile2Page() {
                     <HStack w="100%" gap="50px" >
                       {/* quantity counter */}
                       <HStack textAlign="center" justifyContent={"center"}>
-                        <Image src="src/assets/flag.png" w="12px" />
+                        <Image src="src/flag.png" w="12px" />
                         <Text>Répondre</Text>
 
                       </HStack>
                       <HStack alignItems={"center"} textAlign="center" justifyContent={"center"}>
-                        <Image src="src/assets/flagout.png" w="12px" />
+                        <Image src="src/flagout.png" w="12px" />
                         <Text>Répondre</Text>
 
                       </HStack>
@@ -740,16 +740,16 @@ export default function Profile2Page() {
                 <Box border="2px solid #ABACAD" borderRadius="16px" p="10px">
 
                   <HStack textAlign={"center"}>
-                    <Image src="src/assets/profilepic.png" w="40px" h="40px" />
+                    <Image src="src/profilepic.png" w="40px" h="40px" />
 
 
                     <Box>
                       <HStack> <Text>Aline Dupont ·</Text>
-                        <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                        <Image src="src/etoile.svg" w="13px" h="13px" />
                         <Text>5.0</Text>
                       </HStack>
                       <HStack>
-                        <Image src="src/assets/localisation.png" w="13px" h="13px" />
+                        <Image src="src/localisation.png" w="13px" h="13px" />
                         <Text>24 Oct. - 14:30</Text>
                       </HStack>
                     </Box>
@@ -764,12 +764,12 @@ export default function Profile2Page() {
                     <HStack w="100%" gap="50px" >
                       {/* quantity counter */}
                       <HStack textAlign="center" justifyContent={"center"}>
-                        <Image src="src/assets/flag.png" w="12px" />
+                        <Image src="src/flag.png" w="12px" />
                         <Text>Répondre</Text>
 
                       </HStack>
                       <HStack alignItems={"center"} textAlign="center" justifyContent={"center"}>
-                        <Image src="src/assets/flagout.png" w="12px" />
+                        <Image src="src/flagout.png" w="12px" />
                         <Text>Répondre</Text>
 
                       </HStack>

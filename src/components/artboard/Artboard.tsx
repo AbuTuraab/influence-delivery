@@ -11,7 +11,7 @@ export default function Artboard() {
       >
         <HStack>
           <Image
-            src="/assets/home-hashtag.png"
+            src="/home-hashtag.png"
             w="12px"
             h="12px"
             color={"black"}
@@ -23,7 +23,7 @@ export default function Artboard() {
         </HStack>
 
         <HStack align="flex-start" mt={8} >
-          <Image src="/assets/215.png" w="703px" h="703px" />
+          <Image src="/215.png" w="703px" h="703px" />
           <Box color="black" position={"relative"} >
             <VStack>
               <Box w="496px" h="468px"  p={4} bg="#FFFFFF"
@@ -39,7 +39,7 @@ export default function Artboard() {
                </HStack>
 
                 <Image
-                  src="/assets/Group30.png"
+                  src="/Group30.png"
                   w="43px"
                   h="43px"
                   ml="auto" // <— pushes it to the right
@@ -48,11 +48,11 @@ export default function Artboard() {
 
                 <Text>Nettoyant doux</Text>
                 <HStack>
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
+                  <Image src="src/etoile.svg" w="13px" h="13px" />
                   <Text>5.0 (2 avis)</Text>
                 </HStack>
                 <Text>179,99€</Text>
@@ -73,9 +73,9 @@ export default function Artboard() {
                   <HStack w="100%">
                     {/* quantity counter */}
                     <HStack>
-                      <Image src="src/assets/line.png" w="12px" />
+                      <Image src="src/line.png" w="12px" />
                       <Text>1</Text>
-                      <Image src="src/assets/add.png" w="32px" h="32px" />
+                      <Image src="src/add.png" w="32px" h="32px" />
                     </HStack>
 
                     <Text color="black">50 unités disponibles</Text>
@@ -95,10 +95,10 @@ export default function Artboard() {
                       color="white"
                       w="381px"
                     >
-                      <Image src="src/assets/icone-sac.png" w="18px" h="18px" />
+                      <Image src="src/icone-sac.png" w="18px" h="18px" />
                       <Text fontWeight="bold">Ajouter au panier · 179,99€</Text>
                     </HStack>
-                    <Image src="src/assets/love.png" w="18px" h="18px" />
+                    <Image src="src/love.png" w="18px" h="18px" />
                   </HStack>
                 </Box>
              
@@ -132,7 +132,7 @@ zIndex={0}
                     mt="120px"
                   >
                     <Text>Description</Text>
-                    <Image src="src/assets/fleche.png" w="16px" h="10px" />
+                    <Image src="src/fleche.png" w="16px" h="10px" />
                   </HStack>
                   {/* <Divider color="black"/> */}
                   <HStack
@@ -141,7 +141,7 @@ zIndex={0}
                     spaceY={"10px"}
                   >
                     <Text>Livraison et retours</Text>
-                    <Image src="src/assets/fleche.png" w="16px" h="10px" />
+                    <Image src="src/fleche.png" w="16px" h="10px" />
                   </HStack>
                 </Box>
           </Box>
@@ -150,10 +150,10 @@ zIndex={0}
   <Grid templateColumns="repeat(2, 1fr)" gap="10px" mt="10px">
   
     <SimpleGrid columns={2} gap="10px">
-      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
-      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
-      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px"  />
-      <Image src="/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/C2.png" borderRadius="12px" h="344px" w="344px"  />
+      <Image src="/C2.png" borderRadius="12px" h="344px" w="344px" />
     </SimpleGrid>
 
 </Grid>
@@ -163,7 +163,7 @@ zIndex={0}
  <HStack align="flex-start" mt={8}>
           <Box h="546px" w="391px" bgColor={"white"} >
           <HStack alignItems={"center"} justifyContent={"center"}>
-             <Image src="src/assets/star.svg" w="80px" h="80px" />
+             <Image src="src/star.svg" w="80px" h="80px" />
              <Text   fontFamily="Helvetica Neue"
   fontWeight="bold"
   fontSize="112px"
@@ -175,13 +175,13 @@ zIndex={0}
 
           <HStack alignItems={"center"} justifyContent={"space-around"}>
             <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center"><Text>100%</Text>
                 <Text>Satisfaction</Text>
                 </Box>
             </HStack>
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center"><Text>Excellente</Text>
                 <Text>Qualité globale</Text>
                 </Box>
@@ -200,11 +200,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                 <Image src="src/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/assets/line.png" w="160px" h="3px" />
+             <Image src="src/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -219,11 +219,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                 <Image src="src/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/assets/line.png" w="160px" h="3px" />
+             <Image src="src/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -238,11 +238,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                 <Image src="src/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/assets/line.png" w="160px" h="3px" />
+             <Image src="src/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -257,11 +257,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                 <Image src="src/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/assets/line.png" w="160px" h="3px" />
+             <Image src="src/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -276,11 +276,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                 <Image src="src/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/assets/line.png" w="160px" h="3px" color="grey"/>
+             <Image src="src/line.png" w="160px" h="3px" color="grey"/>
               <HStack>
-                <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                <Image src="src/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -306,22 +306,22 @@ zIndex={0}
            <HStack  ml="auto" // <— pushes it to the right
                   display="flex">
       <Text>Les plus récents</Text>
-      <Image src="src/assets/fleche.png" w="16px" h="10px" />
+      <Image src="src/fleche.png" w="16px" h="10px" />
     </HStack>
         </HStack>
                <Box border="2px solid #ABACAD" borderRadius="16px" py="20px" px="10px" my="10px" >
                 
                 <HStack textAlign={"center"}>
-                  <Image src="src/assets/profilepic.png" w="40px" h="40px" />
+                  <Image src="src/profilepic.png" w="40px" h="40px" />
                  
               
                 <Box>
                  <HStack> <Text>Aline Dupont ·</Text>
-                    <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                    <Image src="src/etoile.svg" w="13px" h="13px" />
                      <Text>5.0</Text>
                     </HStack>
                  <HStack>
-                    <Image src="src/assets/localisation.png" w="13px" h="13px" />
+                    <Image src="src/localisation.png" w="13px" h="13px" />
                    <Text>24 Oct. - 14:30</Text>
                  </HStack>
                 </Box>
@@ -336,12 +336,12 @@ zIndex={0}
                   <HStack w="100%" gap="50px" >
                     {/* quantity counter */}
                     <HStack  textAlign="center" justifyContent={"center"}>
-                      <Image src="src/assets/flag.png" w="12px" />
+                      <Image src="src/flag.png" w="12px" />
                       <Text>Répondre</Text>
                   
                     </HStack>
  <HStack  alignItems={"center"} textAlign="center" justifyContent={"center"}>
-                      <Image src="src/assets/flagout.png" w="12px" />
+                      <Image src="src/flagout.png" w="12px" />
                       <Text>Répondre</Text>
                  
                     </HStack>
@@ -355,16 +355,16 @@ zIndex={0}
   <Box border="2px solid #ABACAD" borderRadius="16px" p="10px">
               
                 <HStack textAlign={"center"}>
-                  <Image src="src/assets/profilepic.png" w="40px" h="40px" />
+                  <Image src="src/profilepic.png" w="40px" h="40px" />
                  
               
                 <Box>
                  <HStack> <Text>Aline Dupont ·</Text>
-                    <Image src="src/assets/etoile.svg" w="13px" h="13px" />
+                    <Image src="src/etoile.svg" w="13px" h="13px" />
                      <Text>5.0</Text>
                     </HStack>
                  <HStack>
-                    <Image src="src/assets/localisation.png" w="13px" h="13px" />
+                    <Image src="src/localisation.png" w="13px" h="13px" />
                    <Text>24 Oct. - 14:30</Text>
                  </HStack>
                 </Box>
@@ -379,12 +379,12 @@ zIndex={0}
                   <HStack w="100%" gap="50px" >
                     {/* quantity counter */}
                     <HStack  textAlign="center" justifyContent={"center"}>
-                      <Image src="src/assets/flag.png" w="12px" />
+                      <Image src="src/flag.png" w="12px" />
                       <Text>Répondre</Text>
                   
                     </HStack>
  <HStack  alignItems={"center"} textAlign="center" justifyContent={"center"}>
-                      <Image src="src/assets/flagout.png" w="12px" />
+                      <Image src="src/flagout.png" w="12px" />
                       <Text>Répondre</Text>
                  
                     </HStack>
