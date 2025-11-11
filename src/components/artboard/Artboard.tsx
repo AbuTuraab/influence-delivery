@@ -1,4 +1,5 @@
-import { Image, HStack, Text, Box, VStack, Link, Grid } from "@chakra-ui/react";
+import { Image, HStack, Text, Box, VStack, Link, Grid, SimpleGrid, Icon} from "@chakra-ui/react";
+import { AiFillShop } from "react-icons/ai";
 
 export default function Artboard() {
   return (
@@ -21,12 +22,21 @@ export default function Artboard() {
           <Text color="black">Headphones sans fil</Text>
         </HStack>
 
-        <HStack align="flex-start" mt={8}>
+        <HStack align="flex-start" mt={8} >
           <Image src="/src/assets/215.png" w="703px" h="703px" />
-          <Box color="black">
+          <Box color="black" position={"relative"} >
             <VStack>
-              <Box w="496px" h="468px" borderRadius="32px" bg="#FFFFFF" p={4}>
-                <Text>CUROLOGY · by @lilaglam</Text>
+              <Box w="496px" h="468px"  p={4} bg="#FFFFFF"
+  boxShadow="0px 8px 16px #0000000F"
+  border="0.5px solid #E5E5E5"
+  borderRadius="32px"
+   zIndex={2} // 👈 Bring this box forward
+      position="relative"
+  opacity={1}>
+               <HStack>
+                <Icon as={AiFillShop} color="#E13E85"/>
+                 <Text> <Text as="span"  color={"#E13E85"}> CUROLOGY · </Text>by @lilaglam</Text>
+               </HStack>
 
                 <Image
                   src="/src/assets/Group30.png"
@@ -91,18 +101,35 @@ export default function Artboard() {
                     <Image src="src/assets/love.png" w="18px" h="18px" />
                   </HStack>
                 </Box>
-                <Box
+             
+
+
+              </Box>
+            </VStack>
+               <Box
                   divideY={"1px"}
                   spaceY={"10px"}
                   boxShadow="0px 8px 16px #0000000F"
-                  border="0.5px solid #E5E5E5"
-                  borderRadius="32px"
+                  
+                  borderRadius="0 0 32px 32px "
                    px="20px"
+                   h="217px"
+                   position={'absolute'}
+                   w="496px"
+                  bottom="-120px"
+                  
+zIndex={0}
+                   bg="#FFFFFF"
+
+  borderBottom="0.5px solid #E5E5E5"
+
+                   
                 >
                   <HStack
                     align={"center"}
                     justify="space-between"
                     spaceY={"10px"}
+                    mt="120px"
                   >
                     <Text>Description</Text>
                     <Image src="src/assets/fleche.png" w="16px" h="10px" />
@@ -113,43 +140,24 @@ export default function Artboard() {
                     justify="space-between"
                     spaceY={"10px"}
                   >
-                    <Text>Description</Text>
+                    <Text>Livraison et retours</Text>
                     <Image src="src/assets/fleche.png" w="16px" h="10px" />
                   </HStack>
                 </Box>
-
-              <Box
-  w="496px"
-  boxShadow="0px 8px 16px #0000000F"
-  border="0.5px solid #E5E5E5"
-  borderRadius="32px"
-  px="20px"
-  h="217px"
->
-  <VStack align="stretch">
-    <HStack justify="space-between">
-      <Text>Description</Text>
-      <Image src="src/assets/fleche.png" w="16px" h="10px" />
-    </HStack>
-
-    <HStack justify="space-between">
-      <Text>Description</Text>
-      <Image src="src/assets/fleche.png" w="16px" h="10px" />
-    </HStack>
-  </VStack>
-</Box>
-
-              </Box>
-            </VStack>
           </Box>
         </HStack>
 
-    <Grid templateColumns="repeat(2, minmax(0, 1fr))" gap="2px">
-<Box>  <Image src="/src/assets/C2.png" borderRadius="12px" h="244px" w="244px" /></Box>
-<Box>  <Image src="/src/assets/C2.png" borderRadius="12px" h="244px" w="244px" /></Box>
-<Box>  <Image src="/src/assets/C2.png" borderRadius="12px" h="244px" w="244px" /></Box>
-<Box>  <Image src="/src/assets/C2.png" borderRadius="12px" h="244px" w="244px" /></Box>
+  <Grid templateColumns="repeat(2, 1fr)" gap="10px" mt="10px">
+  
+    <SimpleGrid columns={2} gap="10px">
+      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px"  />
+      <Image src="/src/assets/C2.png" borderRadius="12px" h="344px" w="344px" />
+    </SimpleGrid>
+
 </Grid>
+
 
 
  <HStack align="flex-start" mt={8}>
@@ -392,6 +400,10 @@ export default function Artboard() {
           </Box>
         </HStack>
       </Box>
+
+
+
+      
     </>
   );
 }

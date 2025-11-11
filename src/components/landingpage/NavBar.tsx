@@ -43,7 +43,7 @@ const MenuLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
         transition="all 0.2s ease"
         w="130px"
         h="43px"
-        bg="red"
+        bgColor="black"
         //  border="0.2px solid #636363"
         borderRadius="14px"
         display="flex"
@@ -51,9 +51,10 @@ const MenuLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
         alignItems="center"
       >
 
-        <Link href="src/components/influencers/Influencers.tsx" variant={"underline"}>
+        <Link href="/influencers" variant={"plain"}>
          Influenceurs
         </Link>
+       
        
       </Button> 
 
@@ -68,7 +69,7 @@ const MenuLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
         transition="all 0.2s ease"
         w="130px"
         h="43px"
-        bg="black"
+        bgColor="black"
         // border="0.2px solid #636363"
         borderRadius="14px"
         display="flex"
@@ -179,12 +180,17 @@ export default function Navbar() {
       >
         <Flex align="center" justify="space-between">
           <Flex justifyContent="left" gap="10">
-            <Logo />
+           
+            <Link href="#">
+             <Logo />
+            </Link>
             <HStack gap="10" display={{ base: "none", md: "flex" }}>
-              <Text color="white" width="">
-                Influenceurs
-              </Text>
-              <Text color="white">Produits</Text>
+        <Link href="/influencers" variant={"plain"} color="white" >
+         Influenceurs
+        </Link>
+              <Link href="/products" variant={"plain"} color="white" >
+         Produits
+        </Link>
             </HStack>
           </Flex>
 
@@ -194,7 +200,10 @@ export default function Navbar() {
             display={{ base: "none", md: "flex" }}
           >
             <HStack gap={{ base: 4, md: 8 }}>
-              <CiHeart />
+             
+              <Link href="/favorites" variant={"plain"} color="white" >
+          <CiHeart />
+        </Link>
               <TbMoneybag />
             </HStack>
 

@@ -22,7 +22,7 @@ import { FaPlus } from "react-icons/fa6";
 function HomePage() {
   return (
     <>
-      <Box height="" bg="#F6F6F7" color={"black"} mt="-66px">
+      <Box bg="#F6F6F7" color={"black"} mt="-66px">
         <Box
   bgImage="url(/MaskGroup5.png)"
   bgSize="cover"

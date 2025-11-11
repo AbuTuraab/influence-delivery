@@ -18,6 +18,8 @@ import Products from './components/products/Products'
 import Favorites from './components/favorites/Favorites'
 import Filter from './components/filter/Filter'
 import Profile2Page from './components/profile/Profile2'
+import Profile6 from './components/profile/profile6'
+
 function App() {
   
 
@@ -33,6 +35,8 @@ function App() {
 <Route path='/favorites' element={<Favorites />} />
 <Route path='/filter' element={<Filter />} />
 <Route path='/profile2' element={<Profile2Page />} />
+
+<Route path='/profile6' element={<Profile6 />} />
 </Routes>
  
 

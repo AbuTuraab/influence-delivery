@@ -16,7 +16,7 @@ function BoutiqueCard() {
       boxShadow="0px 8px 16px #0000000F"
       border="2px solid #E5E5E5"
       overflow="hidden"
-      w="372px"
+      w={{ base: "100%", md: "372px" }}
       h="197px"
       bg="white"
       p="10px"
@@ -96,12 +96,15 @@ export default function Profile2Page() {
           <Text color="black">/</Text>
           <Text color="black">Lila Glam</Text>
         </HStack>
-        <Flex minH="100vh" p={6} fontFamily="Helvetica Neue">
+        <Flex minH="100vh" p={6} fontFamily="Helvetica Neue"
+        
+          direction={{ base: "column", lg: "row" }}  
+        >
 
 
 
           {/* LEFT SECTION */}
-          <Box flex="1" mr={6}>
+          <Box flex="1" mr={6}  >
             {/* big image grid */}
 
 
@@ -115,7 +118,7 @@ export default function Profile2Page() {
                 overflow="hidden"
                
               >
-                <Flex gap="5px">
+                <Flex gap="5px"   direction={{ base: "column", lg: "row" }}  >
                   <Image
                     src="/src/assets/215.png"
                     flex="1"
@@ -309,7 +312,7 @@ export default function Profile2Page() {
           </Box>
 
           {/* RIGHT SIDEBAR */}
-          <Box w="392px" h="100%" bg="white" borderRadius="24px" p={5} boxShadow="0px 8px 16px #0000000F">
+          <Box   w={{ base: "100%", lg: "392px" }}h="100%" bg="white" borderRadius="24px" p={5} boxShadow="0px 8px 16px #0000000F">
 
             <Flex wrap="wrap" gap={0}>
               <Text fontFamily="Helvetica Neue"

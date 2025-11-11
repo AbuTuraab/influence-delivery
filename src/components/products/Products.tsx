@@ -104,14 +104,17 @@ export default function Products() {
                   opacity="1">Chercher un produit</Text>
                 <Input
                   placeholder="Nom du produit..."
-                  bgColor="transparent"
                   textAlign="left"
+                  variant="outline"
+                  border="none"
+                  bgColor={"transparent"}
                   fontFamily="Helvetica Neue"
                   fontSize="16px"
                   fontWeight="500"
                   lineHeight="19px"
                   letterSpacing="0px"
                   color="#1A1A1A"
+                  _focus={{ boxShadow: "none", borderColor: "transparent" }}
                   _placeholder={{
                     fontFamily: "Helvetica Neue",
                     fontSize: "16px",
@@ -120,6 +123,7 @@ export default function Products() {
                     letterSpacing: "0px",
                     color: "#1A1A1A",
                     opacity: 1,
+                    textAlign: "left"
 
                   }}
                 />
@@ -141,13 +145,16 @@ export default function Products() {
                 <Input
                   placeholder="Ville, code postal, adresse..."
                   textAlign="left"
-bgColor="transparent"
+                  variant="outline"
+                  border="none"
+                  bgColor={"transparent"}
                   fontFamily="Helvetica Neue"
                   fontSize="16px"
                   fontWeight="500"
                   lineHeight="19px"
                   letterSpacing="0px"
                   color="#1A1A1A"
+                  _focus={{ boxShadow: "none", borderColor: "transparent" }}
                   _placeholder={{
                     fontFamily: "Helvetica Neue",
                     fontSize: "16px",

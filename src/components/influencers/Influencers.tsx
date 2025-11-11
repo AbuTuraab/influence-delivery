@@ -104,14 +104,17 @@ export default function Influenceurs() {
                   opacity="1">Chercher un influenceur</Text>
                 <Input
                   placeholder="Nom, @pseudonyme"
-                 bgColor={"transparent"}
-                  textAlign="left"
+                     textAlign="left"
+                  variant="outline"
+                  border="none"
+                  bgColor={"transparent"}
                   fontFamily="Helvetica Neue"
                   fontSize="16px"
                   fontWeight="500"
                   lineHeight="19px"
                   letterSpacing="0px"
                   color="#1A1A1A"
+                  _focus={{ boxShadow: "none", borderColor: "transparent" }}
                   _placeholder={{
                     fontFamily: "Helvetica Neue",
                     fontSize: "16px",
@@ -120,7 +123,7 @@ export default function Influenceurs() {
                     letterSpacing: "0px",
                     color: "#1A1A1A",
                     opacity: 1,
-
+                    textAlign: "left"
                   }}
                 />
               </Box>
@@ -141,7 +144,8 @@ export default function Influenceurs() {
                 <Input
                   placeholder="Nom, @pseudonyme"
                   textAlign="left"
-
+                  variant="outline"
+                  border="none"
                   bgColor={"transparent"}
                   fontFamily="Helvetica Neue"
                   fontSize="16px"
@@ -149,6 +153,7 @@ export default function Influenceurs() {
                   lineHeight="19px"
                   letterSpacing="0px"
                   color="#1A1A1A"
+                  _focus={{ boxShadow: "none", borderColor: "transparent" }}
                   _placeholder={{
                     fontFamily: "Helvetica Neue",
                     fontSize: "16px",
@@ -171,7 +176,7 @@ export default function Influenceurs() {
                 borderRadius="20px"
               >
                 <Icon as={FaSearch} color="white"
-                  w="12px" h="12px"
+                  w="20px" h="19.78px"
                 />
               </Button>
             </Flex>
