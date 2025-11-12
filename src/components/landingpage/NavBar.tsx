@@ -208,6 +208,7 @@ export default function Navbar() {
             </HStack>
 
             <HStack display={{ base: "flex" }} gap="10">
+             <Link href="/inscription">
               <Text
                 w="130px"
                 h="43px"
@@ -220,6 +221,7 @@ export default function Navbar() {
               >
                 S’inscrire
               </Text>
+             </Link>
 
               <Text
                 w="130px"

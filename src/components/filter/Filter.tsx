@@ -8,12 +8,15 @@ import {
     Flex,
     Button,
     Input,
-   
+  
+   Checkbox,
     Accordion,
-   
 
-    Checkbox,
+   Stack,
+  
+Link,
  
+ CheckboxGroup,
     Span,
     Icon
 
@@ -21,6 +24,29 @@ import {
 import { FaSearch } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa6";
+import 'leaflet/dist/leaflet.css';
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import  {useState} from "react";
+
+
+function MapPreview() {
+  const position: [number, number] = [6.5244, 3.3792]; // Lagos
+  const AnyMapContainer: any = MapContainer;
+
+  return (
+    <Box borderRadius="16px" overflow="hidden" h="94px" mb="10px">
+      <AnyMapContainer center={position} zoom={13} style={{ height: "94px", width: "240px" }}>
+        <TileLayer
+         
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>Lagos, Nigeria</Popup>
+        </Marker>
+      </AnyMapContainer>
+    </Box>
+  );
+}
 
 
 export default function Filter() {
@@ -31,6 +57,12 @@ export default function Filter() {
         { value: "a", title: "Catégorie", text: "Some value 1..." },
 
     ]
+
+    
+     const [check_Items, set_Check_Items] = useState([]);
+    const chckFn = (values:any) => {
+        set_Check_Items(values);
+    };
 
     return (
         <>
@@ -222,21 +254,28 @@ export default function Filter() {
 
 
                 >
-                    {/* <Box
-    w="288px"
-    h="48px"
-    bgColor="black"
-    borderRadius="16px"
-    display="flex"
-    alignItems="center"
-  >
-    <Text color="white" px="20px">Afficher les filtres</Text>
-  </Box> */}
+                    
 
                     <HStack ml={"auto"}>
-                        <Text>Influenceurs</Text>
-                        <Text>/</Text>
-                        <Text>200</Text>
+                        <Text fontFamily="Helvetica Neue"
+  fontSize="24px"
+  fontWeight="bold"
+  lineHeight="29px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="right"
+  opacity={1}>Influenceurs</Text>
+                       <HStack fontFamily="Helvetica Neue"
+  
+  fontWeight="normal"
+  
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="right"
+  opacity={1}>
+     <Text>/</Text>
+    <Text>200</Text>
+   </HStack>
                     </HStack>
                 </Flex>
 
@@ -269,55 +308,74 @@ export default function Filter() {
 
 
                     {/* top close filter button */}
-                    <Flex w="240px" justify="space-between" align="center" mb="20px">
+                    <Flex w="240px" h="48px" justify="space-around" align="center" mb="20px"   bg="#FFFFFF"
+  border="0.2px solid #C4C4C5"
+  boxShadow="0px 5px 9px #0000000F"
+  borderRadius="16px"
+  opacity={1}>
                         <Text fontWeight="bold">Cacher les filtres</Text>
-                        <Box
-                            w="24px"
-                            h="24px"
-                            borderRadius="50%"
-                            bg="#F2F2F2"
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                            fontWeight="bold"
-                            textAlign="center"
-                            
-                        >
-                            ×
-                        </Box>
+                     
+<Link href="/products"> <Image src="/close-square.png" color="black"/></Link>
+
                     </Flex>
+                    <MapPreview />
                     <Accordion.Root variant={"plain"} collapsible defaultValue={["b"]}>
 
                         {items.map((item, index) => (
                             <Accordion.Item key={index} value={item.value}>
-                                <Accordion.ItemTrigger>
-                                    <Span flex="1">Catégorie</Span>
+                                <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1}>  <Image src="/icoe-boite.png" w="22" h="22" />
+                                    <Span flex="1">
+                                    
+                                      Catégorie
+                                      
+                                      </Span>
 
 
 
-                                    <Accordion.ItemIndicator />
+                                    <Accordion.ItemIndicator  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1} />
                                 </Accordion.ItemTrigger>
 
                                 <Accordion.ItemContent>
 
                                     <Accordion.ItemBody>
-                                        <Checkbox.Root>
-                                            <Checkbox.HiddenInput />
+                                      <Box p={5}>
+               
+                <Stack >
+                   
+                 
+                  
+                  
+                    <CheckboxGroup
+                        colorScheme='pink'
+                        defaultValue={['option1', 'option2']}
+                        value={check_Items}
+                        onChange={chckFn}
+                    >
+                      
+                    </CheckboxGroup>
+                     <Checkbox.Root size='lg'
+                            colorScheme='purple' defaultChecked>
+                            Beaut
+                        </Checkbox.Root>
+                </Stack>
+            </Box>
 
-                                            <Flex align={"center"}
-                                                gap={"60px"}
-                                                alignContent={"center"}>
-                                                <Checkbox.Control />
-                                                <Flex gap="20px">
-                                                    <Checkbox.Label>Beauté</Checkbox.Label>
-                                                    <Box>
-                                                        <Text>56</Text>
-                                                    </Box>
-                                                </Flex>
 
-                                            </Flex>
 
-                                        </Checkbox.Root>
 
 
                                     </Accordion.ItemBody>
@@ -344,12 +402,28 @@ export default function Filter() {
 
                         {items.map((item, index) => (
                             <Accordion.Item key={index} value={item.value}>
-                                <Accordion.ItemTrigger>
+                                <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1}>
+
+    <Image src="/icone-fleches.png" />
                                     <Span flex="1">Trier par</Span>
 
 
 
-                                    <Accordion.ItemIndicator />
+                                    <Accordion.ItemIndicator  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1} />
                                 </Accordion.ItemTrigger>
 
                                 <Accordion.ItemContent>
@@ -380,79 +454,123 @@ export default function Filter() {
                         ))}
                     </Accordion.Root>
 
-                    {/* map preview */}
-                    {/* <Box
-        borderRadius="16px"
-        overflow="hidden"
-        bg="#E4E4E4"
-        mb="24px"
-      >
-        <Image src="/map.png" w="100%" h="100px" objectFit="cover" />
-        <Button
-          mt="12px"
-          mb="12px"
-          color="black"
-          bg="#B6E7FF"
-          w="full"
-          borderRadius="12px"
-        >
-          Voir dans la carte
-        </Button>
-      </Box> */}
 
-                    {/* Accordion categories */}
-                    {/* <Accordion.Root > */}
-                    {/* <Accordion.Item>
-          <AccordionButton>
-            <Text fontSize="18px" flex="1" textAlign="left">Catégorie</Text>
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel>
-            <VStack align="start" spacing="12px">
-              <Flex align="center" gap="6px">
-                <Checkbox defaultChecked colorScheme="purple">Beauté</Checkbox>
-                <Badge bg="#EEE1FF" color="#6A3BC8">56</Badge>
-              </Flex>
-              <Flex align="center" gap="6px">
-                <Checkbox>Mode</Checkbox>
-                <Badge bg="#EEE1FF">34</Badge>
-              </Flex>
-              <Flex align="center" gap="6px">
-                <Checkbox>Sport et santé</Checkbox>
-                <Badge bg="#EEE1FF">26</Badge>
-              </Flex>
-            </VStack>
 
-            <Text
-              mt="12px"
-              color="#7344E4"
-              fontSize="14px"
-              cursor="pointer"
-              fontWeight="semibold"
-            >
-              Effacer toutes les catégories
-            </Text>
-          </AccordionPanel>
-        </Accordion.Item> */}
+                    <Accordion.Root variant={"plain"} collapsible defaultValue={["b"]}>
 
-                    {/* TRIER PAR */}
-                    {/* <Accordion.Item mt="20px">
-          <AccordionButton>
-            <Text fontSize="18px" flex="1" textAlign="left">Trier par</Text>
-            <AccordionIcon />
-          </AccordionButton>
-          <AccordionPanel>
-          <RadioGroup defaultValue="pop">
-              <VStack align="start">
-                <Radio value="pop">Popularité</Radio>
-                <Radio value="croissant">Prix croissant</Radio>
-                <Radio value="decroissant">Prix décroissant</Radio>
-                <Radio value="recent">Plus récents</Radio>
-              </VStack>
-            </RadioGroup> *
-          </AccordionPanel>
-        </Accordion.Item>  */}
-                    {/* </Accordion.Root> */}
+                        {items.map((item, index) => (
+                            <Accordion.Item key={index} value={item.value}>
+                                <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1}>
+
+    <Image src="/icone-etoile.png" />
+                                    <Span flex="1">Note</Span>
+
+
+
+                                    <Accordion.ItemIndicator  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1} />
+                                </Accordion.ItemTrigger>
+
+                                <Accordion.ItemContent>
+
+                                    <Accordion.ItemBody>
+                                        <Checkbox.Root>
+                                            <Checkbox.HiddenInput />
+
+                                            <Flex align={"center"}
+                                                gap={"60px"}
+                                                alignContent={"center"}>
+                                                <Checkbox.Control />
+                                                <Flex gap="20px">
+                                                    <Checkbox.Label>Beauté</Checkbox.Label>
+                                                    <Box>
+                                                        <Text>56</Text>
+                                                    </Box>
+                                                </Flex>
+
+                                            </Flex>
+
+                                        </Checkbox.Root>
+
+
+                                    </Accordion.ItemBody>
+                                </Accordion.ItemContent>
+                            </Accordion.Item>
+                        ))}
+                    </Accordion.Root>
+
+
+
+                    <Accordion.Root variant={"plain"} collapsible defaultValue={["b"]}>
+
+                        {items.map((item, index) => (
+                            <Accordion.Item key={index} value={item.value}>
+                                <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1}>
+
+    <Image src="/icone-euro.png" />
+                                    <Span flex="1">Prix</Span>
+
+
+
+                                    <Accordion.ItemIndicator  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+
+  opacity={1} />
+                                </Accordion.ItemTrigger>
+
+                                <Accordion.ItemContent>
+
+                                    <Accordion.ItemBody>
+                                        <Checkbox.Root>
+                                            <Checkbox.HiddenInput />
+
+                                            <Flex align={"center"}
+                                                gap={"60px"}
+                                                alignContent={"center"}>
+                                                <Checkbox.Control />
+                                                <Flex gap="20px">
+                                                    <Checkbox.Label>Beauté</Checkbox.Label>
+                                                    <Box>
+                                                        <Text>56</Text>
+                                                    </Box>
+                                                </Flex>
+
+                                            </Flex>
+
+                                        </Checkbox.Root>
+
+
+                                    </Accordion.ItemBody>
+                                </Accordion.ItemContent>
+                            </Accordion.Item>
+                        ))}
+                    </Accordion.Root>
+
+                 
                 </Box>
                       
                       
@@ -468,21 +586,21 @@ export default function Filter() {
     flex="1"
     justify="flex-start"> 
       
-          <Box
+           <Box
         w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
   minW="250px"
-  h="403px"
+  h="394px"
   bgColor="white"
   borderRadius="24px"
   boxShadow="0px 8px 16px #0000000F"
   fontFamily="Helvetica Neue"
       >
         {/* Image + top section */}
-        <Box position="relative">
+        <Box position="relative" zIndex={2}>
           <Image
             src="/C2.png"
           w="268px"
-          h="268px"
+          h="285px"
           objectFit="cover"
           borderRadius="18px"
           mx="auto"
@@ -518,7 +636,7 @@ export default function Filter() {
             color="white"
           >
             <HStack justify="space-between" w="100%" padding={3}>
-              <VStack align="flex-start" >
+              <VStack align="flex-start">
                 <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
                 <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
               </VStack>
@@ -541,32 +659,33 @@ export default function Filter() {
         
           mx="auto"
          top={"-26px"}
-          position={"relative"} />
+          position={"relative"} zIndex={2} />
          
-       <Box>
-             <Text fontWeight="700" color="#7344E4" bgColor={"#F9F5FF "}>Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
        </Box>
       
-          <Text fontSize="14px" color="#7B7B7C">Lifestyle / Voyages</Text>
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
         </VStack>
       </Box>
 
-     
    <Box
         w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
   minW="250px"
-  h="403px"
-  bgColor="red"
+  h="394px"
+  bgColor="white"
   borderRadius="24px"
   boxShadow="0px 8px 16px #0000000F"
   fontFamily="Helvetica Neue"
       >
         {/* Image + top section */}
-        <Box position="relative">
+        <Box position="relative" zIndex={2}>
           <Image
             src="/C2.png"
           w="268px"
-          h="268px"
+          h="285px"
           objectFit="cover"
           borderRadius="18px"
           mx="auto"
@@ -602,7 +721,7 @@ export default function Filter() {
             color="white"
           >
             <HStack justify="space-between" w="100%" padding={3}>
-              <VStack align="flex-start" >
+              <VStack align="flex-start">
                 <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
                 <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
               </VStack>
@@ -625,30 +744,33 @@ export default function Filter() {
         
           mx="auto"
          top={"-26px"}
-          position={"relative"} />
+          position={"relative"} zIndex={2} />
          
-       <Box>
-             <Text fontWeight="700" color="#7344E4" bgColor={"#F9F5FF "}>Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
        </Box>
       
-          <Text fontSize="14px" color="#7B7B7C">Lifestyle / Voyages</Text>
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
         </VStack>
       </Box>
-        <Box
+
+   <Box
         w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
   minW="250px"
-  h="403px"
+  h="394px"
   bgColor="white"
   borderRadius="24px"
   boxShadow="0px 8px 16px #0000000F"
   fontFamily="Helvetica Neue"
       >
         {/* Image + top section */}
-        <Box position="relative">
+        <Box position="relative" zIndex={2}>
           <Image
             src="/C2.png"
           w="268px"
-          h="268px"
+          h="285px"
           objectFit="cover"
           borderRadius="18px"
           mx="auto"
@@ -684,7 +806,7 @@ export default function Filter() {
             color="white"
           >
             <HStack justify="space-between" w="100%" padding={3}>
-              <VStack align="flex-start" >
+              <VStack align="flex-start">
                 <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
                 <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
               </VStack>
@@ -707,258 +829,528 @@ export default function Filter() {
         
           mx="auto"
          top={"-26px"}
-          position={"relative"} />
+          position={"relative"} zIndex={2} />
          
-       <Box>
-             <Text fontWeight="700" color="#7344E4" bgColor={"#F9F5FF "}>Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
        </Box>
       
-          <Text fontSize="14px" color="#7B7B7C">Lifestyle / Voyages</Text>
-        </VStack>
-      </Box>  <Box
-        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
-  minW="250px"
-  h="403px"
-  bgColor="white"
-  borderRadius="24px"
-  boxShadow="0px 8px 16px #0000000F"
-  fontFamily="Helvetica Neue"
-      >
-        {/* Image + top section */}
-        <Box position="relative">
-          <Image
-            src="/C2.png"
-          w="268px"
-          h="268px"
-          objectFit="cover"
-          borderRadius="18px"
-          mx="auto"
-          mt="12px" 
-          />
-      
-          {/* heart */}
-          <Box
-            position="absolute"
-            top="10px"
-            right="20px"
-            w="32px"
-            h="32px"
-          
-            borderRadius="50%"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
-            
-       bg="#FFFFFF"
-        opacity={0.3}
-          >
-            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
-          </Box>
-      
-          {/* bottom left + rating */}
-          <Box
-            position="absolute"
-            bottom="12px"
-            left="12px"
-            right="12px"
-            color="white"
-          >
-            <HStack justify="space-between" w="100%" padding={3}>
-              <VStack align="flex-start" >
-                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
-                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
-              </VStack>
-      
-              <HStack>
-                <Image src="/star.svg" w="12.17px" h="12.16px" />
-                <Text fontWeight="600">4.9</Text>
-              </HStack>
-            </HStack>
-          </Box>
-        </Box>
-      
-        {/* lower white area */}
-        <VStack py="16px">
-            
-           <Image 
-            src="/speaker.svg"
-          w="37px"
-          h="23px"
-        
-          mx="auto"
-         top={"-26px"}
-          position={"relative"} />
-         
-       <Box>
-             <Text fontWeight="700" color="#7344E4" bgColor={"#F9F5FF "}>Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
-       </Box>
-      
-          <Text fontSize="14px" color="#7B7B7C">Lifestyle / Voyages</Text>
-        </VStack>
-      </Box>  <Box
-        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
-  minW="250px"
-  h="403px"
-  bgColor="white"
-  borderRadius="24px"
-  boxShadow="0px 8px 16px #0000000F"
-  fontFamily="Helvetica Neue"
-      >
-        {/* Image + top section */}
-        <Box position="relative">
-          <Image
-            src="/C2.png"
-          w="268px"
-          h="268px"
-          objectFit="cover"
-          borderRadius="18px"
-          mx="auto"
-          mt="12px" 
-          />
-      
-          {/* heart */}
-          <Box
-            position="absolute"
-            top="10px"
-            right="20px"
-            w="32px"
-            h="32px"
-          
-            borderRadius="50%"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
-            
-       bg="#FFFFFF"
-        opacity={0.3}
-          >
-            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
-          </Box>
-      
-          {/* bottom left + rating */}
-          <Box
-            position="absolute"
-            bottom="12px"
-            left="12px"
-            right="12px"
-            color="white"
-          >
-            <HStack justify="space-between" w="100%" padding={3}>
-              <VStack align="flex-start" >
-                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
-                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
-              </VStack>
-      
-              <HStack>
-                <Image src="/star.svg" w="12.17px" h="12.16px" />
-                <Text fontWeight="600">4.9</Text>
-              </HStack>
-            </HStack>
-          </Box>
-        </Box>
-      
-        {/* lower white area */}
-        <VStack py="16px">
-            
-           <Image 
-            src="/speaker.svg"
-          w="37px"
-          h="23px"
-        
-          mx="auto"
-         top={"-26px"}
-          position={"relative"} />
-         
-       <Box>
-             <Text fontWeight="700" color="#7344E4" bgColor={"#F9F5FF "}>Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
-       </Box>
-      
-          <Text fontSize="14px" color="#7B7B7C">Lifestyle / Voyages</Text>
-        </VStack>
-      </Box>  <Box
-        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
-  minW="250px"
-  h="403px"
-  bgColor="white"
-  borderRadius="24px"
-  boxShadow="0px 8px 16px #0000000F"
-  fontFamily="Helvetica Neue"
-      >
-        {/* Image + top section */}
-        <Box position="relative">
-          <Image
-            src="/C2.png"
-          w="268px"
-          h="268px"
-          objectFit="cover"
-          borderRadius="18px"
-          mx="auto"
-          mt="12px" 
-          />
-      
-          {/* heart */}
-          <Box
-            position="absolute"
-            top="10px"
-            right="20px"
-            w="32px"
-            h="32px"
-          
-            borderRadius="50%"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
-            
-       bg="#FFFFFF"
-        opacity={0.3}
-          >
-            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
-          </Box>
-      
-          {/* bottom left + rating */}
-          <Box
-            position="absolute"
-            bottom="12px"
-            left="12px"
-            right="12px"
-            color="white"
-          >
-            <HStack justify="space-between" w="100%" padding={3}>
-              <VStack align="flex-start" >
-                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
-                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
-              </VStack>
-      
-              <HStack>
-                <Image src="/star.svg" w="12.17px" h="12.16px" />
-                <Text fontWeight="600">4.9</Text>
-              </HStack>
-            </HStack>
-          </Box>
-        </Box>
-      
-        {/* lower white area */}
-        <VStack py="16px">
-            
-           <Image 
-            src="/speaker.svg"
-          w="37px"
-          h="23px"
-        
-          mx="auto"
-         top={"-26px"}
-          position={"relative"} />
-         
-       <Box>
-             <Text fontWeight="700" color="#7344E4" bgColor={"#F9F5FF "}>Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
-       </Box>
-      
-          <Text fontSize="14px" color="#7B7B7C">Lifestyle / Voyages</Text>
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
         </VStack>
       </Box>
+
+   <Box
+        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
+  minW="250px"
+  h="394px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+  fontFamily="Helvetica Neue"
+      >
+        {/* Image + top section */}
+        <Box position="relative" zIndex={2}>
+          <Image
+            src="/C2.png"
+          w="268px"
+          h="285px"
+          objectFit="cover"
+          borderRadius="18px"
+          mx="auto"
+          mt="12px" 
+          />
+      
+          {/* heart */}
+          <Box
+            position="absolute"
+            top="10px"
+            right="20px"
+            w="32px"
+            h="32px"
+          
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
+            
+       bg="#FFFFFF"
+        opacity={0.3}
+          >
+            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
+          </Box>
+      
+          {/* bottom left + rating */}
+          <Box
+            position="absolute"
+            bottom="12px"
+            left="12px"
+            right="12px"
+            color="white"
+          >
+            <HStack justify="space-between" w="100%" padding={3}>
+              <VStack align="flex-start">
+                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
+                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
+              </VStack>
+      
+              <HStack>
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
+                <Text fontWeight="600">4.9</Text>
+              </HStack>
+            </HStack>
+          </Box>
+        </Box>
+      
+        {/* lower white area */}
+        <VStack py="16px">
+            
+           <Image 
+            src="/speaker.svg"
+          w="37px"
+          h="23px"
+        
+          mx="auto"
+         top={"-26px"}
+          position={"relative"} zIndex={2} />
+         
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       </Box>
+      
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
+        </VStack>
+      </Box>
+
+   <Box
+        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
+  minW="250px"
+  h="394px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+  fontFamily="Helvetica Neue"
+      >
+        {/* Image + top section */}
+        <Box position="relative" zIndex={2}>
+          <Image
+            src="/C2.png"
+          w="268px"
+          h="285px"
+          objectFit="cover"
+          borderRadius="18px"
+          mx="auto"
+          mt="12px" 
+          />
+      
+          {/* heart */}
+          <Box
+            position="absolute"
+            top="10px"
+            right="20px"
+            w="32px"
+            h="32px"
+          
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
+            
+       bg="#FFFFFF"
+        opacity={0.3}
+          >
+            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
+          </Box>
+      
+          {/* bottom left + rating */}
+          <Box
+            position="absolute"
+            bottom="12px"
+            left="12px"
+            right="12px"
+            color="white"
+          >
+            <HStack justify="space-between" w="100%" padding={3}>
+              <VStack align="flex-start">
+                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
+                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
+              </VStack>
+      
+              <HStack>
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
+                <Text fontWeight="600">4.9</Text>
+              </HStack>
+            </HStack>
+          </Box>
+        </Box>
+      
+        {/* lower white area */}
+        <VStack py="16px">
+            
+           <Image 
+            src="/speaker.svg"
+          w="37px"
+          h="23px"
+        
+          mx="auto"
+         top={"-26px"}
+          position={"relative"} zIndex={2} />
+         
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       </Box>
+      
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
+        </VStack>
+      </Box>
+
+   <Box
+        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
+  minW="250px"
+  h="394px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+  fontFamily="Helvetica Neue"
+      >
+        {/* Image + top section */}
+        <Box position="relative" zIndex={2}>
+          <Image
+            src="/C2.png"
+          w="268px"
+          h="285px"
+          objectFit="cover"
+          borderRadius="18px"
+          mx="auto"
+          mt="12px" 
+          />
+      
+          {/* heart */}
+          <Box
+            position="absolute"
+            top="10px"
+            right="20px"
+            w="32px"
+            h="32px"
+          
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
+            
+       bg="#FFFFFF"
+        opacity={0.3}
+          >
+            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
+          </Box>
+      
+          {/* bottom left + rating */}
+          <Box
+            position="absolute"
+            bottom="12px"
+            left="12px"
+            right="12px"
+            color="white"
+          >
+            <HStack justify="space-between" w="100%" padding={3}>
+              <VStack align="flex-start">
+                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
+                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
+              </VStack>
+      
+              <HStack>
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
+                <Text fontWeight="600">4.9</Text>
+              </HStack>
+            </HStack>
+          </Box>
+        </Box>
+      
+        {/* lower white area */}
+        <VStack py="16px">
+            
+           <Image 
+            src="/speaker.svg"
+          w="37px"
+          h="23px"
+        
+          mx="auto"
+         top={"-26px"}
+          position={"relative"} zIndex={2} />
+         
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       </Box>
+      
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
+        </VStack>
+      </Box>
+
+   <Box
+        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
+  minW="250px"
+  h="394px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+  fontFamily="Helvetica Neue"
+      >
+        {/* Image + top section */}
+        <Box position="relative" zIndex={2}>
+          <Image
+            src="/C2.png"
+          w="268px"
+          h="285px"
+          objectFit="cover"
+          borderRadius="18px"
+          mx="auto"
+          mt="12px" 
+          />
+      
+          {/* heart */}
+          <Box
+            position="absolute"
+            top="10px"
+            right="20px"
+            w="32px"
+            h="32px"
+          
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
+            
+       bg="#FFFFFF"
+        opacity={0.3}
+          >
+            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
+          </Box>
+      
+          {/* bottom left + rating */}
+          <Box
+            position="absolute"
+            bottom="12px"
+            left="12px"
+            right="12px"
+            color="white"
+          >
+            <HStack justify="space-between" w="100%" padding={3}>
+              <VStack align="flex-start">
+                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
+                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
+              </VStack>
+      
+              <HStack>
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
+                <Text fontWeight="600">4.9</Text>
+              </HStack>
+            </HStack>
+          </Box>
+        </Box>
+      
+        {/* lower white area */}
+        <VStack py="16px">
+            
+           <Image 
+            src="/speaker.svg"
+          w="37px"
+          h="23px"
+        
+          mx="auto"
+         top={"-26px"}
+          position={"relative"} zIndex={2} />
+         
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       </Box>
+      
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
+        </VStack>
+      </Box>
+
+   <Box
+        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
+  minW="250px"
+  h="394px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+  fontFamily="Helvetica Neue"
+      >
+        {/* Image + top section */}
+        <Box position="relative" zIndex={2}>
+          <Image
+            src="/C2.png"
+          w="268px"
+          h="285px"
+          objectFit="cover"
+          borderRadius="18px"
+          mx="auto"
+          mt="12px" 
+          />
+      
+          {/* heart */}
+          <Box
+            position="absolute"
+            top="10px"
+            right="20px"
+            w="32px"
+            h="32px"
+          
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
+            
+       bg="#FFFFFF"
+        opacity={0.3}
+          >
+            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
+          </Box>
+      
+          {/* bottom left + rating */}
+          <Box
+            position="absolute"
+            bottom="12px"
+            left="12px"
+            right="12px"
+            color="white"
+          >
+            <HStack justify="space-between" w="100%" padding={3}>
+              <VStack align="flex-start">
+                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
+                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
+              </VStack>
+      
+              <HStack>
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
+                <Text fontWeight="600">4.9</Text>
+              </HStack>
+            </HStack>
+          </Box>
+        </Box>
+      
+        {/* lower white area */}
+        <VStack py="16px">
+            
+           <Image 
+            src="/speaker.svg"
+          w="37px"
+          h="23px"
+        
+          mx="auto"
+         top={"-26px"}
+          position={"relative"} zIndex={2} />
+         
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       </Box>
+      
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
+        </VStack>
+      </Box>
+
+   <Box
+        w={["45%", "288px"]} // (mobile = 45%, desktop = fixed 288px)
+  minW="250px"
+  h="394px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+  fontFamily="Helvetica Neue"
+      >
+        {/* Image + top section */}
+        <Box position="relative" zIndex={2}>
+          <Image
+            src="/C2.png"
+          w="268px"
+          h="285px"
+          objectFit="cover"
+          borderRadius="18px"
+          mx="auto"
+          mt="12px" 
+          />
+      
+          {/* heart */}
+          <Box
+            position="absolute"
+            top="10px"
+            right="20px"
+            w="32px"
+            h="32px"
+          
+            borderRadius="50%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            boxShadow="0px 4px 12px rgba(0,0,0,0.12)"
+            
+       bg="#FFFFFF"
+        opacity={0.3}
+          >
+            <Icon as={FaHeart} w="18px" h="16px" color="red"/>
+          </Box>
+      
+          {/* bottom left + rating */}
+          <Box
+            position="absolute"
+            bottom="12px"
+            left="12px"
+            right="12px"
+            color="white"
+          >
+            <HStack justify="space-between" w="100%" padding={3}>
+              <VStack align="flex-start">
+                <Text fontWeight="700" fontSize="18px">Zoé Chic</Text>
+                <Text fontSize="14px" opacity={0.8}>@nom · 128K</Text>
+              </VStack>
+      
+              <HStack>
+                <Image src="/star.svg" w="12.17px" h="12.16px" />
+                <Text fontWeight="600">4.9</Text>
+              </HStack>
+            </HStack>
+          </Box>
+        </Box>
+      
+        {/* lower white area */}
+        <VStack py="16px">
+            
+           <Image 
+            src="/speaker.svg"
+          w="37px"
+          h="23px"
+        
+          mx="auto"
+         top={"-26px"}
+          position={"relative"} zIndex={2} />
+         
+       <Box position="absolute" bgColor={"#F9F5FF"} w="268px" h="281px" borderRadius={"24px"} textAlign={"center"} 
+                    spaceY={"10px"}
+                    mt="-250px" zIndex={0}>
+             <Text fontWeight="700" color="#7344E4" mt="250px" >Sponsor dès <span style={{color:"#7344E4"}}>200€</span></Text>
+       </Box>
+      
+          <Text fontSize="14px" color="#7B7B7C" mt="10px">Lifestyle / Voyages</Text>
+        </VStack>
+      </Box>
+
       
 
       </Flex>
@@ -1042,3 +1434,4 @@ export default function Filter() {
         </>
     )
 }
+

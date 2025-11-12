@@ -4,48 +4,168 @@ import {
     HStack,
     VStack,
     Text,
-   
+   Accordion,
     Flex,
     Button,
     Input,
-   
   
     Icon,
- 
+
+
+
  
 
 } from "@chakra-ui/react";
 import { FaSearch } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa6";
-// import { StarIcon } from "@chakra-ui/icons";
-import {  FiChevronUp } from "react-icons/fi";
+
 
 import { FaShareAlt, FaTiktok  } from "react-icons/fa";
 
+
+import { useAccordionItemContext } from "@chakra-ui/react"
+
+const AccordionItemStatus = () => {
+  const item = useAccordionItemContext()
+  return (
+    <Box color={"black"}>
+      {item.expanded ? "Réduire" : "Infos du propriétaire"}
+    </Box>
+  )
+}
+
+// Usage
+const Demo = () => (
+  <Box position="relative" pb="50px"> 
+    <Accordion.Root collapsible variant={"plain"}>
+      <Accordion.Item value="item-1">
+     
+
+<Accordion.ItemTrigger 
+  position="absolute"
+  bottom="20px"
+  left="50%"
+  transform="translateX(-50%)"
+  display="flex"
+  alignItems="center"
+  gap="8px" 
+  fontFamily="Helvetica Neue"
+  fontSize="18px"
+  fontWeight="bold"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  opacity={1}
+  width="auto"
+  zIndex={1}
+  whiteSpace="nowrap" 
+>
+  <AccordionItemStatus />
+  <Accordion.ItemIndicator 
+    fontFamily="Helvetica Neue"
+    fontSize="18px"
+    fontWeight="bold"
+    lineHeight="23px"
+    letterSpacing="0px"
+    color="#1A1A1A"
+    opacity={1} 
+  />
+</Accordion.ItemTrigger>
+
+
+        <Accordion.ItemContent>
+          <Accordion.ItemBody>
+            <Box>
+              <Box mt="20px">
+                <Text fontWeight="semibold" fontSize="sm" mb={2}>Propriétaire</Text>
+                <HStack align="center" mb={3}>
+                  <Image src="https://i.pravatar.cc/150?img=32" w="40px" h="40px" borderRadius="50%" />
+                  <VStack align="start">
+                    <Text fontSize="sm" fontWeight="medium">Lila Glam</Text>
+                    <Text fontSize="xs" color="gray.500">@lilaglam</Text>
+                  </VStack>
+                </HStack>
+              </Box>
+
+              <Flex w="240px" h="42px" borderRadius={"21px"} pt="20px" pb="20px" my="20px" border="0.5px solid #DCDDDE" justify="space-around" align="center">
+                <VStack>
+                  <Text
+                    fontFamily="Helvetica Neue"
+                    fontWeight="bold"
+                    fontSize="16px"
+                    letterSpacing="0px"
+                    textAlign="center"
+                    color="#121826"
+                    opacity={1}
+                  >234K</Text>
+                  <Text
+                    fontFamily="Helvetica Neue"
+                    fontWeight="normal"
+                    fontSize="8px"
+                    letterSpacing="0px"
+                    textAlign="center"
+                    color="#1A1A1A"
+                    opacity={1}
+                  >Followers</Text>
+                </VStack>
+                <VStack>
+                  <Text 
+                    fontFamily="Helvetica Neue"
+                    fontWeight="bold"
+                    lineHeight="19px"
+                    letterSpacing="0px"
+                    textAlign="center"
+                    color="#121826"
+                    opacity={1}
+                  >4.5</Text>
+                  <Image src="/star.svg" w="10px" h="10px" opacity={1}/>
+                </VStack>
+              </Flex>
+
+              <HStack justify="center" mb={3}>
+                {[1,2,3].map(i => (
+                  <HStack
+                    key={i}
+                    px={3}
+                    py={1}
+                    borderRadius="full"
+                    bg="gray.100"
+                  >
+                    <Icon as={FaTiktok} w="16px" h="16px"/>
+                    <Text fontSize="xs">128K</Text>
+                  </HStack>
+                ))}
+              </HStack>
+            </Box>
+          </Accordion.ItemBody>
+        </Accordion.ItemContent>
+      </Accordion.Item>
+    </Accordion.Root>
+  </Box>
+)
 
 export default function Profile6() {
 
 
 
-    // const items = [
-    //     { value: "a", title: "Catégorie", text: "Some value 1..." },
-
-    // ]
+    
+  
 
     return (
         <>
-            <Box bg="#F6F6F7" color={"black"} mt="40px">
+            <Box bg="#F6F6F7" color={"black"} mt="40px" >
 
 
-  <HStack>
+
+  <HStack py="20px" pl="100px">
 
 
                                 <Image
-                                    src="/home-hashtag.svg"
+                                    src="/home-hashtag.png"
                                     w="12px"
                                     h="12px"
-color={"black"}
+                                    
                                 />
 
                                 <Text color="black">
@@ -74,125 +194,81 @@ color={"black"}
 
 
                <Box
-                    bgImage="url(/image-proxy.png)"
-                    bgSize="cover"
+                   
+                 
                     bgPos="center"
                     bgRepeat="no-repeat"
                     height="64px"
-                    minH={{ base: "580px", md: "268px" }}
+                    minH={{ base: "580px", md: "330px" }}
                     display="flex"
                     alignItems="center"
                     justifyContent=""
-                    px={{ base: 4, md: 10 }}
+                  
                     position={"relative"}
+                
                     
                 >
-
-                     <Box
-      bg="white"
-      w="288px"
-
-
-      p={4}
-
- bgColor="#FFFFFF"
+<Image src="/image-proxy.png"  maxW={"96%"} mx="auto"/>
+              <Box
+  bg="white"
+  w="288px"
+  p={4}
+  bgColor="#FFFFFF"
   boxShadow="0px 3px 13px #0000000A"
   border="0.2px solid #E5E5E5"
   borderRadius="32px"
-  opacity={1}      position={"absolute"}
-      top="50px"
-    >
-      {/* top app icon */}
-<Flex justify="space-between" align="center"  mb={3} mt="-30px" >
+  opacity={1}
+  position={"absolute"}
+  top="40px"
+  left="100px"
+>
+  {/* top app icon */}
+  <Flex justify="space-between" align="center" mb={3} mt="-30px">
+    {/* app image left */}
+    <Image
+      src="/curology.png"
+      alt="Curology"
+      w="99px"
+      h="99px"
+    />
 
-  {/* app image left */}
-  <Image
-    src="/curology.png"
-    alt="Curology"
-    w="99px"
-    h="99px"
+    {/* icons right */}
+    <HStack>
+      <Box p={2} borderRadius="50%" bg="#F3EEFF">
+        <FaShareAlt color="black" />
+      </Box>
+      <Box p={2} borderRadius="50%" bg="#F3EEFF">
+        <FaHeart color="black" />
+      </Box>
+    </HStack>
+  </Flex>
 
-  />
+  {/* share + rating row */}
+  <Flex justifyContent={"space-between"} align="center" gap={2} mb={2}>
+    <Text fontWeight="bold" fontSize="lg">Curology</Text>
+    <HStack>
+      <Image src="/star.svg" w="12px" h="12px" />
+      <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">5.0</Text>
+    </HStack>
+  </Flex>
 
-  {/* icons right */}
-  <HStack >
-    <Box p={2} borderRadius="50%" bg="#F3EEFF">
-      <FaShareAlt color="black" />
-    </Box>
-    <Box p={2} borderRadius="50%" bg="#F3EEFF">
-      <FaHeart color="black" />
-    </Box>
-  </HStack>
-
+<Flex gap="10px" textAlign={"center"} align="center" >
+  <Image src="/localisation(1).svg" w="12px" h="13px"/>
+    <Text fontSize="xs" color="gray.500">Bordeaux, France</Text>
+</Flex>
+<Flex gap="10px" textAlign={"center"} align="center" >
+   <Image src="/localisation(2).svg" w="13px" h="13px"/>
+    <Text fontSize="xs" color="gray.500"> Depuis 2025</Text>
 </Flex>
 
-      {/* share + rating row */}
-      <Flex justifyContent={"space-between"} align="center" gap={2} mb={2}>
-      
-      
-    
-
-      <Text fontWeight="bold" fontSize="lg">Curology</Text>
-        <HStack>
-            <Image src="/star.svg" w="12px" h="12px" />
-            <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">5.0</Text>
-          </HStack>
- </Flex>
-      <Text fontSize="xs" color="gray.500">📍 Bordeaux, France</Text>
-      <Text fontSize="xs" color="gray.500">📅 Depuis 2025</Text>
  
-        
+
+  <Flex justify="center" mt={2}>
    
-<Box mt="20px">
-
-      <Text fontWeight="semibold" fontSize="sm" mb={2}>Propriétaire</Text>
-
-      <HStack align="center" mb={3}>
-        <Image  src="https://i.pravatar.cc/150?img=32" w="40px" h="40px" borderRadius="50%" />
-        <VStack  align="start">
-          <Text fontSize="sm" fontWeight="medium">Lila Glam</Text>
-          <Text fontSize="xs" color="gray.500">@lilaglam</Text>
-        </VStack>
-      </HStack>
+    
+<Demo />
+  </Flex>
 </Box>
-
-      {/* stats */}
-      <Flex justify="space-around" align="center" mb={3} mx="auto">
-        <VStack >
-          <Text fontSize="sm" fontWeight="bold">234K</Text>
-          <Text fontSize="xs" color="gray.500">Followers</Text>
-        </VStack>
-        <VStack >
-        
-            <Text fontWeight="bold" fontSize="sm">4.5</Text>
-        <Image src="/star.svg" w="12px" h="12px" />
-        </VStack>
-      </Flex>
-
-      {/* tiktok badges */}
-      <HStack justify="space-between" mb={3}>
-        {[1,2,3].map(i => (
-          <HStack
-            key={i}
-           
-            px={3}
-            py="3px"
-            borderRadius="full"
-            bg="gray.100"
-          >
-           < Icon as={FaTiktok} w="25px" h="25px"/>
-            <Text fontSize="xs">128K</Text>
-          </HStack>
-        ))}
-      </HStack>
-
-      <Flex justify="center" mt={2}>
-        <Text fontSize="xs" color="gray.600" fontWeight="medium">
-          Réduire
-        </Text>
-        <FiChevronUp style={{ marginLeft: 4 }} />
-      </Flex>
-    </Box>
                 
                 </Box>
 
@@ -310,10 +386,28 @@ mb="20px"
                         </Flex>
 
                     <HStack ml={"auto"}>
-                        <Text>Produits</Text>
+                        <Text 
+                      fontFamily="Helvetica Neue"
+  fontSize="24px"
+  fontWeight="bold"
+  lineHeight="29px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="right"
+  opacity={1}
+                        >Produits</Text>
                        
-                        <Text>/</Text>
-                         <Text>8</Text>
+                        <HStack fontFamily="Helvetica Neue"
+  
+  fontWeight="normal"
+  
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="right"
+  opacity={1}>
+<Text>/</Text>
+    <Text>8</Text>
+  </HStack>
                     </HStack>
                 </Flex>
        <Flex    gap={4}
@@ -892,6 +986,47 @@ mb="20px"
 
 
             </Box>
+
+
+
+
+
+
+
+  {/* <Accordion.Root  collapsible defaultValue={["b"]}>
+   
+                           {items.map((item, index) => (
+                               <Accordion.Item key={index} value={item.value}>
+                                   <Accordion.ItemTrigger > 
+                                       <Span flex="1">
+                                       
+                                        Réduire
+                                         
+                                         </Span>
+   
+   
+   
+                                       
+                                   </Accordion.ItemTrigger>
+   
+                                   <Accordion.ItemContent>
+   
+                                       <Accordion.ItemBody>
+                        
+   
+   
+   
+   
+   
+                                       </Accordion.ItemBody>
+                                   </Accordion.ItemContent>
+                               </Accordion.Item>
+                           ))}
+                       </Accordion.Root> */}
+
+
+
+
         </>
     )
 }

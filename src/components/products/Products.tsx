@@ -9,7 +9,7 @@ import {
   Button,
   Input,
   Icon,
-
+  Link
 
 } from "@chakra-ui/react"
 import { FaSearch } from "react-icons/fa";
@@ -196,14 +196,14 @@ export default function Products() {
  
   align="center"
 
-   px={4} 
+
 
      w="1200px"
           
-              maxW="95%"
+              maxW="100%"
               mx="auto"
           
-              p="18px"
+           
               gap="20px"
               py={{ base: 4, md: 0 }}
               h="64px"
@@ -211,7 +211,7 @@ export default function Products() {
               justify={{ base: "center", md: "space-between" }}
 
 
-   >
+   >  <Link href="/filter">
   <Box
     w="288px"
     h="48px"
@@ -220,13 +220,30 @@ export default function Products() {
     display="flex"
     alignItems="center"
   >
+ 
     <Text color="white" px="20px">Afficher les filtres</Text>
-  </Box>
+  </Box></Link>
 
   <HStack>
-    <Text>Produits</Text>
-    <Text>/</Text>
+    <Text fontFamily="Helvetica Neue"
+  fontSize="24px"
+  fontWeight="bold"
+  lineHeight="29px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="right"
+  opacity={1}>Produits</Text>
+   <HStack fontFamily="Helvetica Neue"
+  
+  fontWeight="normal"
+  
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="right"
+  opacity={1}>
+     <Text>/</Text>
     <Text>200</Text>
+   </HStack>
   </HStack>
 </Flex>
 
@@ -323,90 +340,9 @@ opacity={1}>
             </HStack>
           </VStack>
         </Box>
-        <Box
-  w="288px"
-  h="403px"
-  bgColor="white"
-  borderRadius="24px"
-  boxShadow="0px 8px 16px #0000000F"
->
-  <Image
-    src="/C2.png"
-    w="268px"
-    h="268px"
-    objectFit="cover"
-    borderRadius="18px"
-    mx="auto"
-    mt="12px"   // <-- top margin here
-  />
+     
 
-
-
-          <VStack align="flex-start" p="14px" >
-            <HStack w="100%" justify="space-between" align="center">
-              <Text   fontFamily="Helvetica Neue"
-  fontWeight="medium"
-  fontSize="18px"
-  lineHeight="23px"
-  letterSpacing="0px"
-  color="#1A1A1A"
-  textAlign="left"
-  opacity={1}>
-                Rouge à levres - YS
-              </Text>
-
-              <HStack >
-                <Image src="/star.svg"   w="12px"
-  h="12px"
-  bgImage="url('/img/star.png')"
-  bgSize="cover"
-  bgRepeat="no-repeat"
-
-  opacity={1} />
-                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
-                  5.0
-                </Text>
-              </HStack>
-            </HStack>
-
-            <Text w="61px"
-  h="16px"
-  fontFamily="Helvetica Neue"
-  fontStyle="normal"
-  fontWeight="normal"
-  fontSize="14px"
-  lineHeight="16px"
-  letterSpacing="0px"
-  color="#7B7B7C"
-  textAlign="left"
-  opacity={1}>
-              @lolarend
-            </Text>
-
-            <HStack w="100%" justify="space-between" align="center" mt="6px">
-              <Text 
-fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
-letterSpacing="0px;="
-color="#121826"
-opacity={1}>
-                69,00€
-              </Text>
-
-              <Box
-                w="60px"
-                h="40px"
-                borderRadius="20px"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
-              >
-                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
-              </Box>
-            </HStack>
-          </VStack>
-        </Box>
-        <Box
+     <Box
   w="288px"
   h="403px"
   bgColor="white"
@@ -444,6 +380,7 @@ opacity={1}>
   bgImage="url('/img/star.png')"
   bgSize="cover"
   bgRepeat="no-repeat"
+
   opacity={1} />
                 <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
                   5.0
@@ -451,7 +388,7 @@ opacity={1}>
               </HStack>
             </HStack>
 
-            <Text w="61px"
+            <Text 
   h="16px"
   fontFamily="Helvetica Neue"
   fontStyle="normal"
@@ -488,7 +425,8 @@ opacity={1}>
             </HStack>
           </VStack>
         </Box>
-        <Box
+
+     <Box
   w="288px"
   h="403px"
   bgColor="white"
@@ -526,7 +464,7 @@ opacity={1}>
   bgImage="url('/img/star.png')"
   bgSize="cover"
   bgRepeat="no-repeat"
-  
+
   opacity={1} />
                 <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
                   5.0
@@ -534,7 +472,7 @@ opacity={1}>
               </HStack>
             </HStack>
 
-            <Text w="61px"
+            <Text 
   h="16px"
   fontFamily="Helvetica Neue"
   fontStyle="normal"
@@ -571,7 +509,8 @@ opacity={1}>
             </HStack>
           </VStack>
         </Box>
-        <Box
+
+     <Box
   w="288px"
   h="403px"
   bgColor="white"
@@ -609,7 +548,7 @@ opacity={1}>
   bgImage="url('/img/star.png')"
   bgSize="cover"
   bgRepeat="no-repeat"
- 
+
   opacity={1} />
                 <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
                   5.0
@@ -617,7 +556,7 @@ opacity={1}>
               </HStack>
             </HStack>
 
-            <Text w="61px"
+            <Text 
   h="16px"
   fontFamily="Helvetica Neue"
   fontStyle="normal"
@@ -654,7 +593,8 @@ opacity={1}>
             </HStack>
           </VStack>
         </Box>
-        <Box
+
+     <Box
   w="288px"
   h="403px"
   bgColor="white"
@@ -692,6 +632,7 @@ opacity={1}>
   bgImage="url('/img/star.png')"
   bgSize="cover"
   bgRepeat="no-repeat"
+
   opacity={1} />
                 <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
                   5.0
@@ -699,7 +640,7 @@ opacity={1}>
               </HStack>
             </HStack>
 
-            <Text w="61px"
+            <Text 
   h="16px"
   fontFamily="Helvetica Neue"
   fontStyle="normal"
@@ -736,7 +677,8 @@ opacity={1}>
             </HStack>
           </VStack>
         </Box>
-        <Box
+
+     <Box
   w="288px"
   h="403px"
   bgColor="white"
@@ -774,7 +716,7 @@ opacity={1}>
   bgImage="url('/img/star.png')"
   bgSize="cover"
   bgRepeat="no-repeat"
-  
+
   opacity={1} />
                 <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
                   5.0
@@ -782,7 +724,7 @@ opacity={1}>
               </HStack>
             </HStack>
 
-            <Text w="61px"
+            <Text 
   h="16px"
   fontFamily="Helvetica Neue"
   fontStyle="normal"
@@ -819,6 +761,175 @@ opacity={1}>
             </HStack>
           </VStack>
         </Box>
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/C2.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+        
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/C2.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+        
         
         
         </Flex>
@@ -829,72 +940,69 @@ opacity={1}>
 
 
 
+<Flex w="100%" justify="center" align="center" py="20px" position="relative">
 
+  {/* Back button - positioned absolutely on the left */}
+  <Box
+    position="absolute"
+    left="510px"
+    w="64px"
+    h="43px"
+    borderRadius="16px"
+    bg="#FFFFFF"
+    boxShadow="0px 8px 16px #0000000F"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    cursor="pointer"
+  >
+    <FaArrowLeft />
+  </Box>
 
-<Flex w="100%" justify="space-between" align="center" py="20px">
+  {/* Centered blue button */}
+  <Flex
+    h="43px"
+    w="179px"
+    px="24px"
+    borderRadius="14px"
+    align="center"
+    justify="center"
+    bg="#7344E4"
+    color="white"
+    cursor="pointer"
+    fontFamily="Helvetica Neue"
+    fontWeight="600"
+    fontSize="14px"
+    gap="6px"
+  >
+    <Text>Page suivante</Text> 
+    <FaArrowRight />
+  </Flex>
 
-  {/* left side buttons */}
-  <HStack  mx="auto" gap={4}>
-    {/* back button */}
+  {/* Right side page numbers - positioned absolutely */}
+  <HStack 
+    fontFamily="Helvetica Neue"
+    fontSize="14px" 
+    color="#1A1A1A"
+    position="absolute"
+    right="90px"
+  >
+    <Text>Page</Text>
     <Box
-      w="64px"
-      h="43px"
-      borderRadius="16px"
+      w="48px"
+      h="32px"
+      px="12px"
+      py="4px"
       bg="#FFFFFF"
+      borderRadius="14px"
       boxShadow="0px 8px 16px #0000000F"
       display="flex"
       alignItems="center"
       justifyContent="center"
-      cursor="pointer"
+      textAlign="center"
     >
-      <FaArrowLeft />
+      <Text fontWeight="600">2</Text>
     </Box>
-
-    {/* next page button */}
-    <Flex
-      h="43px"
-      w="179px"
-      px="24px"
-      borderRadius="14px"
-      align="center"
-      justify="center"
-      bg="#7344E4"
-      color="white"
-      cursor="pointer"
-      fontFamily="Helvetica Neue"
-      fontWeight="600"
-      fontSize="14px"
-      gap="6px"
-    >
-     <Text>
-       Page suivante
-      </Text> 
-      
-      <FaArrowRight />
-    </Flex>
-  </HStack>
-
-  {/* right side page numbers */}
-  <HStack fontFamily="Helvetica Neue"
-   fontSize="14px" color="#1A1A1A"
-   mr="90px">
-    <Text>Page</Text>
-   <Box
-  w="48px"
-  h="32px"
-  px="12px"
-  py="4px"
-  bg="#FFFFFF"
-  borderRadius="14px"
-  boxShadow="0px 8px 16px #0000000F"
-  display="flex"
-  alignItems="center"
-  justifyContent="center"
-  textAlign="center"
->
-  <Text fontWeight="600">2</Text>
-</Box>
-
     <Text>de 16</Text>
   </HStack>
 

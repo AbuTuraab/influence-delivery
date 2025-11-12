@@ -19,6 +19,7 @@ import Favorites from './components/favorites/Favorites'
 import Filter from './components/filter/Filter'
 import Profile2Page from './components/profile/Profile2'
 import Profile6 from './components/profile/profile6'
+import Inscription from './components/inscription/Inscription'
 
 function App() {
   
@@ -36,6 +37,7 @@ function App() {
 <Route path='/filter' element={<Filter />} />
 <Route path='/profile2' element={<Profile2Page />} />
 <Route path='/profile6' element={<Profile6 />} />
+<Route path='/inscription' element={<Inscription />} />
 </Routes>
  
 

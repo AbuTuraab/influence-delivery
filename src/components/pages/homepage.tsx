@@ -6,6 +6,7 @@ import Favorites from "../favorites/Favorites";
 import Filter from "../filter/Filter";
 import Profile2Page from "../profile/Profile2";
 import Profile6 from "../profile/profile6";
+import Inscription from "../inscription/Inscription";
 
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
      <Filter />
      <Profile2Page />
      <Profile6 />
+     <Inscription />
     </>
   );
 }

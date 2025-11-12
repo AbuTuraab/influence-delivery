@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+  <g id="localisation" transform="translate(-54 -711)">
+    <rect id="Rectangle_17364" data-name="Rectangle 17364" width="15" height="15" transform="translate(54 711)" fill="none"/>
+    <g id="clock" transform="translate(53.65 710.65)">
+      <path id="Path_29705" data-name="Path 29705" d="M7.85,1.35a6.5,6.5,0,1,1-6.5,6.5A6.507,6.507,0,0,1,7.85,1.35Zm0,11.729A5.229,5.229,0,1,0,2.621,7.85,5.235,5.235,0,0,0,7.85,13.079Z" transform="translate(0 0)" fill="#939494"/>
+      <path id="Path_29706" data-name="Path 29706" d="M14.077,12.462a.673.673,0,0,1-.332-.087l-1.86-1.054a1.845,1.845,0,0,1-.9-1.509V7.477a.651.651,0,0,1,1.3,0V9.812a.665.665,0,0,0,.269.449l1.862,1.055a.6.6,0,0,1,.225.846A.658.658,0,0,1,14.077,12.462Z" transform="translate(-4.033 -2.204)" fill="#939494"/>
+    </g>
+  </g>
+</svg>

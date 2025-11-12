@@ -35,7 +35,13 @@ export default function Artboard() {
   opacity={1}>
                <HStack>
                 <Icon as={AiFillShop} color="#E13E85"/>
-                 <Text> <Text as="span"  color={"#E13E85"}> CUROLOGY · </Text>by @lilaglam</Text>
+                 <Text  fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="13px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"> <Text as="span"  color={"#E13E85"}> CUROLOGY · </Text>by @lilaglam</Text>
                </HStack>
 
                 <Image
@@ -46,39 +52,79 @@ export default function Artboard() {
                   display="block" // to respect the margin
                 />
 
-                <Text>Nettoyant doux</Text>
+                <Text  
+                fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="32px"
+  lineHeight="39px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left">Nettoyant doux</Text>
                 <HStack>
-                  <Image src="src/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/etoile.svg" w="13px" h="13px" />
-                  <Image src="src/etoile.svg" w="13px" h="13px" />
-                  <Text>5.0 (2 avis)</Text>
+                  <Image src="/etoile.svg" w="13px" h="13px" />
+                  <Image src="/etoile.svg" w="13px" h="13px" />
+                  <Image src="/etoile.svg" w="13px" h="13px" />
+                  <Image src="/etoile.svg" w="13px" h="13px" />
+                  <Image src="/etoile.svg" w="13px" h="13px" />
+                  <Text color="#1A1A1A">5.0 (2 avis)</Text>
                 </HStack>
-                <Text>179,99€</Text>
+                <Text    
+                fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="24px"
+  
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left" mt="10px" mb="10px">179,99€</Text>
                 <Box
                   height={"111px"}
                   border="0.5px solid #DCDDDE"
                   borderRadius={"20px"}
+                  px="15px"
+                  pt="10px"
                 >
-                  <Text>
+                  <Text    fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="21px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  >
                     Éliminez les impuretés et l’excès de sébum sans irriter la
                     peau ni obstruer les pores grâce au Nettoyant Doux. Sa
                     texture gel légèrement moussante convient à tous les types
                     de…
                   </Text>
-                  <Link color="#7344E4">En savoir plus</Link>
+                  <Link fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="medium"
+  fontSize="14px"
+  lineHeight="21px"
+  letterSpacing="0px"
+ 
+  textAlign="left" color="#7344E4">En savoir plus</Link>
                 </Box>
                 <Box w="100%" mt={4}>
                   <HStack w="100%">
                     {/* quantity counter */}
-                    <HStack>
-                      <Image src="src/line.png" w="12px" />
+                    <HStack w="103px" h="38px" bg="#F6F6F7"
+  borderRadius="24px"
+   alignItems="center"
+  justifyContent="space-around"
+  p={4}>
+                      <Image src="/line.png" w="32px"   />
                       <Text>1</Text>
-                      <Image src="src/add.png" w="32px" h="32px" />
+                      <Image src="/add.png" w="32px" h="32px" />
                     </HStack>
 
-                    <Text color="black">50 unités disponibles</Text>
+                    <Text fontFamily="'Helvetica Neue', sans-serif"
+  fontStyle="italic"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="21px"
+  letterSpacing="0px"
+  color="#939494"
+  textAlign="left"
+  opacity={1}>50 unités disponibles</Text>
                   </HStack>
 
                   {/* ADD TO CART BUTTON */}
@@ -95,10 +141,10 @@ export default function Artboard() {
                       color="white"
                       w="381px"
                     >
-                      <Image src="src/icone-sac.png" w="18px" h="18px" />
+                      <Image src="/icone-sac.png" w="18px" h="18px" />
                       <Text fontWeight="bold">Ajouter au panier · 179,99€</Text>
                     </HStack>
-                    <Image src="src/love.png" w="18px" h="18px" />
+                    <Image src="/love.png" w="18px" h="18px" />
                   </HStack>
                 </Box>
              
@@ -132,7 +178,7 @@ zIndex={0}
                     mt="120px"
                   >
                     <Text>Description</Text>
-                    <Image src="src/fleche.png" w="16px" h="10px" />
+                    <Image src="/fleche.png" w="16px" h="10px" />
                   </HStack>
                   {/* <Divider color="black"/> */}
                   <HStack
@@ -141,7 +187,7 @@ zIndex={0}
                     spaceY={"10px"}
                   >
                     <Text>Livraison et retours</Text>
-                    <Image src="src/fleche.png" w="16px" h="10px" />
+                    <Image src="/fleche.png" w="16px" h="10px" />
                   </HStack>
                 </Box>
           </Box>
@@ -160,10 +206,12 @@ zIndex={0}
 
 
 
- <HStack align="flex-start" mt={8}>
-          <Box h="546px" w="391px" bgColor={"white"} >
-          <HStack alignItems={"center"} justifyContent={"center"}>
-             <Image src="src/star.svg" w="80px" h="80px" />
+ <HStack align="flex-start" mt={8 }>
+          <Box h="546px" w="391px" bg="#FFFFFF"
+  border="0.5px solid #E5E5E5"
+  borderRadius="32px" >
+          <HStack alignItems={"center"} justifyContent={"center"} my="25px">
+             <Image src="/star.svg" w="80px" h="80px" />
              <Text   fontFamily="Helvetica Neue"
   fontWeight="bold"
   fontSize="112px"
@@ -173,23 +221,38 @@ zIndex={0}
   textAlign="center">5.0</Text>
           </HStack>
 
-          <HStack alignItems={"center"} justifyContent={"space-around"}>
+          <HStack alignItems={"center"} justifyContent={"space-around"} my="25px" >
             <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
-                <Box color="black"  textAlign="center"><Text>100%</Text>
+                <Image src="/etoile.svg" w="13px" h="13px" />
+                <Box color="black" ><Text  fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="24px"
+  
+  letterSpacing="0px"
+  color="#1A1A1A">100%</Text>
                 <Text>Satisfaction</Text>
                 </Box>
             </HStack>
               <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
-                <Box color="black"  textAlign="center"><Text>Excellente</Text>
+                <Image src="/etoile.svg" w="13px" h="13px" />
+                <Box color="black"  ><Text  fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="24px"
+  
+  letterSpacing="0px"
+  color="#1A1A1A">Excellente</Text>
                 <Text>Qualité globale</Text>
                 </Box>
             </HStack>
           </HStack>
 
-          <Box color="black" px="10px" py="20px">
-            <Text>Note globale (2 avis)</Text>
+          <Box color="black" px="10px" py="20px" my="25px">
+            <Text fontFamily="Helvetica Neue"
+  fontWeight="bold"
+  fontSize="18px"
+  lineHeight="22px"
+  letterSpacing="0px"
+  color="#1A1A1A" ml="10px" textAlign="left">Note globale (2 avis)</Text>
 
         
 
@@ -200,11 +263,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <Image src="/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/line.png" w="160px" h="3px" />
+             <Image src="/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
+                <Image src="/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -219,11 +282,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <Image src="/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/line.png" w="160px" h="3px" />
+             <Image src="/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
+                <Image src="/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -238,11 +301,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <Image src="/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/line.png" w="160px" h="3px" />
+             <Image src="/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
+                <Image src="/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -257,11 +320,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <Image src="/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/line.png" w="160px" h="3px" />
+             <Image src="/line.png" w="160px" h="3px" />
               <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
+                <Image src="/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -276,11 +339,11 @@ zIndex={0}
                    
                <Text>5</Text>
                 </Box>
-                 <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <Image src="/etoile.svg" w="13px" h="13px" />
             </HStack>
-             <Image src="src/line.png" w="160px" h="3px" color="grey"/>
+             <Image src="/line.png" w="160px" h="3px" color="grey"/>
               <HStack>
-                <Image src="src/etoile.svg" w="13px" h="13px" />
+                <Image src="/etoile.svg" w="13px" h="13px" />
                 <Box color="black"  textAlign="center">
                  
                  <Text>2 (100%)</Text>
@@ -294,11 +357,18 @@ zIndex={0}
 
 
 
-          <Box color="black" w="808px" h="543px" bgColor={"white"} >
+          <Box color="black" w="808px" h="543px" bg="#FFFFFF"
+  border="0.5px solid #E5E5E5"
+  borderRadius="32px" >
             <VStack>
               <Box h="468px" borderRadius="32px" bg="#FFFFFF" p={5} my="10px" >
                 <HStack >
-<Text color="black">Avis clients</Text>
+<Text  fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="24px"
+  
+  letterSpacing="0px"
+  color="#1A1A1A">Avis clients</Text>
           <Text color="black">/</Text>
           
           <Text color="black">2 Avis</Text>
@@ -306,23 +376,35 @@ zIndex={0}
            <HStack  ml="auto" // <— pushes it to the right
                   display="flex">
       <Text>Les plus récents</Text>
-      <Image src="src/fleche.png" w="16px" h="10px" />
+      <Image src="/fleche.png" w="16px" h="10px" />
     </HStack>
         </HStack>
                <Box border="2px solid #ABACAD" borderRadius="16px" py="20px" px="10px" my="10px" >
                 
                 <HStack textAlign={"center"}>
-                  <Image src="src/profilepic.png" w="40px" h="40px" />
+                  <Image src="/profilepic.png" w="40px" h="40px" />
                  
               
                 <Box>
-                 <HStack> <Text>Aline Dupont ·</Text>
-                    <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <HStack> <Text  fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="16px"
+  
+  letterSpacing="0px"
+  color="#1A1A1A">Aline Dupont ·</Text>
+                    <Image src="/etoile.svg" w="13px" h="13px" />
                      <Text>5.0</Text>
                     </HStack>
                  <HStack>
-                    <Image src="src/localisation.png" w="13px" h="13px" />
-                   <Text>24 Oct. - 14:30</Text>
+                    <Image src="/localisation.png" w="13px" h="13px" />
+                   <Text fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#939494"
+  textAlign="left"
+  opacity={1}>24 Oct. - 14:30</Text>
                  </HStack>
                 </Box>
                 
@@ -335,14 +417,40 @@ zIndex={0}
                 <Box w="100%" mt={4}>
                   <HStack w="100%" gap="50px" >
                     {/* quantity counter */}
-                    <HStack  textAlign="center" justifyContent={"center"}>
-                      <Image src="src/flag.png" w="12px" />
-                      <Text>Répondre</Text>
+                    <HStack  textAlign="center" justifyContent={"center"} w="106px"
+  h="32px"
+  bg="#F9FAFB"
+  border="0.5px solid #F6F6F7"
+  borderRadius="17px"
+  opacity={1}>
+                      <Image src="/flag.png" w="12px" />
+                      <Text fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="500"
+  fontSize="14px"
+  lineHeight="17px"
+  letterSpacing="0px"
+  color="#4A4B4B"
+  textAlign="left"
+  opacity={1}>Répondre</Text>
                   
                     </HStack>
- <HStack  alignItems={"center"} textAlign="center" justifyContent={"center"}>
-                      <Image src="src/flagout.png" w="12px" />
-                      <Text>Répondre</Text>
+ <HStack  alignItems={"center"} textAlign="center" justifyContent={"center"} w="106px"
+  h="32px"
+  bg="#F9FAFB"
+  border="0.5px solid #F6F6F7"
+  borderRadius="17px"
+  opacity={1}>
+                      <Image src="/flagout.png" w="12px" />
+                      <Text fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="500"
+  fontSize="14px"
+  lineHeight="17px"
+  letterSpacing="0px"
+  color="#4A4B4B"
+  textAlign="left"
+  opacity={1}>Répondre</Text>
                  
                     </HStack>
                    
@@ -355,17 +463,29 @@ zIndex={0}
   <Box border="2px solid #ABACAD" borderRadius="16px" p="10px">
               
                 <HStack textAlign={"center"}>
-                  <Image src="src/profilepic.png" w="40px" h="40px" />
+                  <Image src="/profilepic.png" w="40px" h="40px" />
                  
               
                 <Box>
-                 <HStack> <Text>Aline Dupont ·</Text>
-                    <Image src="src/etoile.svg" w="13px" h="13px" />
+                 <HStack> <Text  fontFamily="'Helvetica Neue', sans-serif"
+  fontWeight="bold"
+  fontSize="16px"
+  
+  letterSpacing="0px"
+  color="#1A1A1A">Aline Dupont ·</Text>
+                    <Image src="/etoile.svg" w="13px" h="13px" />
                      <Text>5.0</Text>
                     </HStack>
                  <HStack>
-                    <Image src="src/localisation.png" w="13px" h="13px" />
-                   <Text>24 Oct. - 14:30</Text>
+                    <Image src="/localisation.png" w="13px" h="13px" />
+                   <Text fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#939494"
+  textAlign="left"
+  opacity={1}>24 Oct. - 14:30</Text>
                  </HStack>
                 </Box>
                 
@@ -378,14 +498,40 @@ zIndex={0}
                 <Box w="100%" mt={4}>
                   <HStack w="100%" gap="50px" >
                     {/* quantity counter */}
-                    <HStack  textAlign="center" justifyContent={"center"}>
-                      <Image src="src/flag.png" w="12px" />
-                      <Text>Répondre</Text>
+                    <HStack  textAlign="center" justifyContent={"center"} w="106px"
+  h="32px"
+  bg="#F9FAFB"
+  border="0.5px solid #F6F6F7"
+  borderRadius="17px"
+  opacity={1}>
+                      <Image src="/flag.png" w="12px" />
+                      <Text fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="500"
+  fontSize="14px"
+  lineHeight="17px"
+  letterSpacing="0px"
+  color="#4A4B4B"
+  textAlign="left"
+  opacity={1}>Répondre</Text>
                   
                     </HStack>
- <HStack  alignItems={"center"} textAlign="center" justifyContent={"center"}>
-                      <Image src="src/flagout.png" w="12px" />
-                      <Text>Répondre</Text>
+ <HStack  alignItems={"center"} textAlign="center" justifyContent={"center"} w="106px"
+  h="32px"
+  bg="#F9FAFB"
+  border="0.5px solid #F6F6F7"
+  borderRadius="17px"
+  opacity={1}>
+                      <Image src="/flagout.png" w="12px" />
+                      <Text fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="500"
+  fontSize="14px"
+  lineHeight="17px"
+  letterSpacing="0px"
+  color="#4A4B4B"
+  textAlign="left"
+  opacity={1}>Répondre</Text>
                  
                     </HStack>
                    
