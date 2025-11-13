@@ -12,11 +12,11 @@ import {
    Checkbox,
     Accordion,
 
-   Stack,
   
 Link,
  
  CheckboxGroup,
+
     Span,
     Icon
 
@@ -26,7 +26,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa6";
 import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import  {useState} from "react";
 
 
 function MapPreview() {
@@ -52,6 +51,25 @@ function MapPreview() {
 export default function Filter() {
 
 
+const categories = [
+        { name: "Beauté", count: 56, color: "#7344E4" },
+        { name: "Mode", count: 34, color: "#7344E4"  },
+        { name: "Sport et santé", count: 26, color: "#7344E4"  },
+        { name: "Gastronomie", count: 2, color: "#7344E4"  },
+        { name: "Maison", count: 14, color: "#7344E4"  },
+        { name: "Technologie", count: 25, color: "#7344E4"  }
+    ];
+
+    // const sortOptions = [
+    //     { id: "popularity", label: "Popularité", icon: FaArrowRight },
+    //     { id: "price-asc", label: "Prix croissant", icon: FaArrowRight },
+    //     { id: "price-desc", label: "Prix décroissant", icon: FaArrowRight },
+    //     { id: "recent", label: "Plus récents", icon: FaArrowRight},
+    //     { id: "rating", label: "Meilleures notes", icon: FaArrowRight },
+    //     { id: "alpha", label: "Ordre alphabétique", icon: FaArrowRight },
+    //     { id: "followers", label: "Plus de followers", icon: FaArrowRight }
+    // ];
+
 
     const items = [
         { value: "a", title: "Catégorie", text: "Some value 1..." },
@@ -59,10 +77,6 @@ export default function Filter() {
     ]
 
     
-     const [check_Items, set_Check_Items] = useState([]);
-    const chckFn = (values:any) => {
-        set_Check_Items(values);
-    };
 
     return (
         <>
@@ -299,7 +313,7 @@ export default function Filter() {
 
                           <Box
                     w="288px"
-                    h="900px"
+                  
                     bg="white"
                     boxShadow="0px 8px 16px #0000000F"
                     borderRadius="24px"
@@ -319,18 +333,50 @@ export default function Filter() {
 
                     </Flex>
                     <MapPreview />
-                    <Accordion.Root variant={"plain"} collapsible defaultValue={["b"]}>
+                  
 
-                        {items.map((item, index) => (
-                            <Accordion.Item key={index} value={item.value}>
-                                <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
+                      <Box 
+         
+            bg="white" 
+            borderRadius="16px" 
+           
+            fontFamily="Helvetica Neue"
+            position="relative"
+        >
+            {/* Scroll Indicator */}
+            <Box
+                position="absolute"
+                right="4px"
+                top="50%"
+                transform="translateY(-50%)"
+                w="3px"
+                h="60%"
+                bg="gray.200"
+                borderRadius="full"
+            >
+                <Box
+                    w="100%"
+                    h="30%"
+                    borderRadius="full"
+                />
+            </Box>
+
+            <Accordion.Root 
+                collapsible 
+                defaultValue={["category", "sort"]}
+                multiple
+            >
+                {/* Category Section */}
+                <Accordion.Item value="category" borderBottom="1px solid #E5E5E5">
+                     <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
   fontSize="18px"
   fontWeight="bold"
   lineHeight="23px"
   letterSpacing="0px"
   color="#1A1A1A"
 
-  opacity={1}>  <Image src="/icoe-boite.png" w="22" h="22" />
+  opacity={1}>  
+  <Image src="/cat.png" />
                                     <Span flex="1">
                                     
                                       Catégorie
@@ -349,43 +395,39 @@ export default function Filter() {
   opacity={1} />
                                 </Accordion.ItemTrigger>
 
-                                <Accordion.ItemContent>
+                    <Accordion.ItemContent>
+                        <Accordion.ItemBody px={4} pb={4}>
+                            <VStack align="stretch" gap={3}>
+                                {categories.map((cat, idx) => (
+                                    <HStack key={idx} justify="space-between">
+                                        <HStack>
+                                            <CheckboxGroup 
+                                                defaultChecked={idx === 0}
+                                                colorScheme="purple"
+                                                sx={{
+                                                    '[data-checked]': {
+                                                        bg: '#7344E4',
+                                                        borderColor: '#7344E4'
+                                                    }
+                                                }}
+                                            >
+                                                <Text fontSize="13px" color="#1A1A1A">
+                                                    {cat.name}
+                                                </Text>
+                                            </CheckboxGroup>
+                                        </HStack>
+                                        <Text fontSize="12px" color="#7B7B7C">
+                                            {cat.count}
+                                        </Text>
+                                    </HStack>
+                                ))}
+                              
+                            </VStack>
+                        </Accordion.ItemBody>
+                    </Accordion.ItemContent>
+                </Accordion.Item>
 
-                                    <Accordion.ItemBody>
-                                      <Box p={5}>
-               
-                <Stack >
-                   
-                 
-                  
-                  
-                    <CheckboxGroup
-                        colorScheme='pink'
-                        defaultValue={['option1', 'option2']}
-                        value={check_Items}
-                        onChange={chckFn}
-                    >
-                      
-                    </CheckboxGroup>
-                     <Checkbox.Root size='lg'
-                            colorScheme='purple' defaultChecked>
-                            Beaut
-                        </Checkbox.Root>
-                </Stack>
-            </Box>
-
-
-
-
-
-                                    </Accordion.ItemBody>
-                                </Accordion.ItemContent>
-                            </Accordion.Item>
-                        ))}
-                    </Accordion.Root>
-
-
-                    <Box>
+                <Box>
                         <Text
                             mt="12px"
                             color="#7344E4"
@@ -397,12 +439,9 @@ export default function Filter() {
                         </Text>
                     </Box>
 
-
-                    <Accordion.Root variant={"plain"} collapsible defaultValue={["b"]}>
-
-                        {items.map((item, index) => (
-                            <Accordion.Item key={index} value={item.value}>
-                                <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
+                {/* Note Section */}
+                <Accordion.Item value="note" borderBottom="1px solid #E5E5E5">
+                     <Accordion.ItemTrigger  fontFamily="Helvetica Neue"
   fontSize="18px"
   fontWeight="bold"
   lineHeight="23px"
@@ -426,33 +465,20 @@ export default function Filter() {
   opacity={1} />
                                 </Accordion.ItemTrigger>
 
-                                <Accordion.ItemContent>
+                    <Accordion.ItemContent>
+                        <Accordion.ItemBody px={4} pb={4}>
+                          
+                        </Accordion.ItemBody>
+                    </Accordion.ItemContent>
+                </Accordion.Item>
 
-                                    <Accordion.ItemBody>
-                                        <Checkbox.Root>
-                                            <Checkbox.HiddenInput />
-
-                                            <Flex align={"center"}
-                                                gap={"60px"}
-                                                alignContent={"center"}>
-                                                <Checkbox.Control />
-                                                <Flex gap="20px">
-                                                    <Checkbox.Label>Beauté</Checkbox.Label>
-                                                    <Box>
-                                                        <Text>56</Text>
-                                                    </Box>
-                                                </Flex>
-
-                                            </Flex>
-
-                                        </Checkbox.Root>
+               
+            </Accordion.Root>
+        </Box>
 
 
-                                    </Accordion.ItemBody>
-                                </Accordion.ItemContent>
-                            </Accordion.Item>
-                        ))}
-                    </Accordion.Root>
+                   
+
 
 
 

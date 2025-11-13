@@ -9,55 +9,79 @@ import { CiYoutube } from "react-icons/ci";
 
 
 
-function BoutiqueCard() {
-  return (
-   <Link href="/profile6">
-    <Box
-      borderRadius="32px"
-      boxShadow="0px 8px 16px #0000000F"
-      border="2px solid #E5E5E5"
-      overflow="hidden"
-      w={{ base: "100%", md: "372px" }}
-      h="197px"
-      bg="white"
-      p="10px"
-      mb="10px"
-      mx="auto"
-    >
-      {/* image area */}
-      <Box >
-        <Image
-          src="/C2.png"
-          w="352px"
-          h="117px"
-          objectFit="cover"
-          borderRadius="18px"
-          mx="auto"
-        />
-      </Box>
 
-      <VStack align="stretch" px="10px">
-        <HStack justify="space-between">
-          <Text fontFamily="Helvetica Neue" fontWeight="500" fontSize="18px" color="#1A1A1A">
-            Curology
-          </Text>
-
-          <HStack>
-            <Image src="/star.svg" w="12px" h="12px" />
-            <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">5.0</Text>
-          </HStack>
-        </HStack>
-
-        <HStack justify="space-between">
-          <Text fontFamily="Helvetica Neue" fontSize="14px" color="#7B7B7C">@lilaglam</Text>
-          <Text fontSize="14px" color="#7B7B7C">8 produits</Text>
-        </HStack>
-      </VStack>
-    </Box>
-   </Link>
-  );
+interface BoutiqueCardProps {
+  imageSrc: string;
+  title: string;
+  username: string;
+  rating: number;
+  productsCount: number;
+  link: string;
 }
 
+export function BoutiqueCard({
+  imageSrc,
+  title,
+  username,
+  rating,
+  productsCount,
+  link,
+}: BoutiqueCardProps) {
+  return (
+    <Link href={link}>
+      <Box
+        borderRadius="32px"
+        boxShadow="0px 8px 16px #0000000F"
+        border="2px solid #E5E5E5"
+        overflow="hidden"
+        w={{ base: "100%", md: "372px" }}
+        h="197px"
+        bg="white"
+        p="10px"
+        mb="10px"
+        mx="auto"
+       
+      >
+        {/* Image Area */}
+        <Box>
+          <Image
+            src={imageSrc}
+            w="352px"
+            h="117px"
+            objectFit="cover"
+            borderRadius="18px"
+            mx="auto"
+          />
+        </Box>
+
+        {/* Info Section */}
+        <VStack align="stretch" px="10px" mt="8px">
+          <HStack justify="space-between">
+            <Text fontFamily="Helvetica Neue" fontWeight="500" fontSize="18px" color="#1A1A1A">
+              {title}
+            </Text>
+
+            <HStack>
+              <Image src="/star.svg" w="12px" h="12px" />
+              <Text fontSize="14px" fontWeight="bold" color="#1A1A1A">
+                {rating.toFixed(1)}
+              </Text>
+            </HStack>
+          </HStack>
+
+          <HStack justify="space-between">
+            <Text fontFamily="Helvetica Neue" fontSize="14px" color="#7B7B7C">
+              @{username}
+            </Text>
+            <Text fontSize="14px" color="#7B7B7C">
+              {productsCount} produits
+            </Text>
+          </HStack>
+        </VStack>
+      </Box>
+    </Link>
+  );
+}
 
 
 export default function Profile2Page() {
@@ -122,7 +146,7 @@ export default function Profile2Page() {
               >
                 <Flex gap="5px"   direction={{ base: "column", lg: "row" }}  >
                   <Image
-                    src="/215.png"
+                    src="/ChatGPTi.jpg"
                     flex="1"
                     h="400px"
                     objectFit="cover"
@@ -131,12 +155,12 @@ export default function Profile2Page() {
                   />
 
                   <Flex wrap="wrap"  flex="1">
-                    <Image src="/215.png" w="50%" h="200px" pb="2.5px" />
-                    <Image src="/215.png" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
-                    <Image src="/215.png" w="50%" h="200px" pt="2.5px" />
+                    <Image src="/ChatGPTi.jpg" w="50%" h="200px" pb="2.5px" />
+                    <Image src="/ChatGPTi.jpg" w="50%" h="200px" borderRadius="0px 32px 0px 0px" pb="2.5px" pl="5px" />
+                    <Image src="/ChatGPTi.jpg" w="50%" h="200px" pt="2.5px" />
 
                     <Box position="relative" w="50%" h="200px" pl="5px" pt="2.5px">
-                      <Image src="/215.png" w="100%" h="100%"/>
+                      <Image src="/ChatGPTi.jpg" w="100%" h="100%"/>
 
                       <Box
                         position="absolute"
@@ -533,18 +557,44 @@ export default function Profile2Page() {
             columns={{ base: 1, md: 2 }}
 
           >
-            <BoutiqueCard />
-            <BoutiqueCard />
-            <BoutiqueCard />
-            <BoutiqueCard />
+            <BoutiqueCard 
+            imageSrc="/b.png"
+    title="Curology"
+    username="lilaglam"
+    rating={5.0}
+    productsCount={8}
+    link="/profile6"
+            />
+            <BoutiqueCard
+            imageSrc="/c.png"
+    title="Curology"
+    username="lilaglam"
+    rating={5.0}
+    productsCount={8}
+    link="/profile6" />
+            <BoutiqueCard 
+            imageSrc="/d.png"
+    title="Curology"
+    username="lilaglam"
+    rating={5.0}
+    productsCount={8}
+    link="/profile6"
+            />
+            <BoutiqueCard
+            imageSrc="/e.png"
+    title="Curology"
+    username="lilaglam"
+    rating={5.0}
+    productsCount={8}
+    link="/profile6" />
           </SimpleGrid>
         </Box>
 
 
 
         <HStack align="flex-start" mt={8} >
-          <Box h="auto" w="391px" bgColor={"white"} borderRadius="32px" >
-            <HStack alignItems={"center"} justifyContent={"center"}>
+          <Box h="543px" w="391px" bgColor={"white"} borderRadius="32px" >
+            <HStack alignItems={"center"} justifyContent={"center"} my="30px">
               <Image src="/star.svg" w="80px" h="80px" />
               <Text fontFamily="Helvetica Neue"
                 fontWeight="bold"
@@ -555,28 +605,28 @@ export default function Profile2Page() {
                 textAlign="center">5.0</Text>
             </HStack>
 
-            <HStack alignItems={"center"} justifyContent={"space-around"}
+            <HStack alignItems={"center"} justifyContent={"space-around"} my="20px"
             >
               <HStack >
-                <Image src="/etoile.svg" w="13px" h="13px" />
+                <Image src="/zig.png" w="40px" h="40px" />
                 <Box color="black" textAlign="center"><Text>100%</Text>
                   <Text>Satisfaction</Text>
                 </Box>
               </HStack>
               <HStack>
-                <Image src="/etoile.svg" w="13px" h="13px" />
+                <Image src="/medal.png" w="40px" h="40px" />
                 <Box color="black" textAlign="center"><Text>Excellente</Text>
                   <Text>Qualité globale</Text>
                 </Box>
               </HStack>
             </HStack>
+<Text pl="50px" color="black">Note globale (2 avis)</Text>
+            <VStack color="black" my="20px" >
+              
 
-            <Box color="black" px="10px" py="20px">
-              <Text>Note globale (2 avis)</Text>
 
 
-
-              <HStack alignItems={"center"} justifyContent={"space-around"} >
+              <HStack alignItems={"center"} justifyContent={"space-around"}  >
                 <HStack>
 
                   <Box color="black" textAlign="center">
@@ -670,7 +720,7 @@ export default function Profile2Page() {
                   </Box>
                 </HStack>
               </HStack>
-            </Box>
+            </VStack>
           </Box>
 
 
@@ -681,7 +731,7 @@ export default function Profile2Page() {
 
 
 
-          <Box color="black" w="808px" h="auto" bgColor={"white"} borderRadius="32px"   >
+          <Box color="black" w="808px" h="543px" bgColor={"white"} borderRadius="32px"   >
             <VStack>
               <Box h="468px" borderRadius="32px" bg="#FFFFFF" p={5} my="10px" >
                 <HStack >

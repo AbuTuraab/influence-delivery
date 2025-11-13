@@ -265,7 +265,7 @@ export default function Products() {
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/headphone.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -350,7 +350,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/cap.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -434,7 +434,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/shoe.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -518,7 +518,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/bot.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -602,7 +602,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/bott.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -686,7 +686,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/5086.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -770,7 +770,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/skate.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -854,7 +854,7 @@ opacity={1}>
   boxShadow="0px 8px 16px #0000000F"
 >
   <Image
-    src="/C2.png"
+    src="/swell.png"
     w="268px"
     h="268px"
     objectFit="cover"
@@ -931,6 +931,680 @@ opacity={1}>
         </Box>
         
         
+ <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/headphone.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+     
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/cap.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/shoe.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/bot.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/bott.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/5086.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/skate.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+        
+     <Box
+  w="288px"
+  h="403px"
+  bgColor="white"
+  borderRadius="24px"
+  boxShadow="0px 8px 16px #0000000F"
+>
+  <Image
+    src="/swell.png"
+    w="268px"
+    h="268px"
+    objectFit="cover"
+    borderRadius="18px"
+    mx="auto"
+    mt="12px"   // <-- top margin here
+  />
+
+
+
+          <VStack align="flex-start" p="14px">
+            <HStack w="100%" justify="space-between" align="center">
+              <Text   fontFamily="Helvetica Neue"
+  fontWeight="medium"
+  fontSize="18px"
+  lineHeight="23px"
+  letterSpacing="0px"
+  color="#1A1A1A"
+  textAlign="left"
+  opacity={1}>
+                Rouge à levres - YS
+              </Text>
+
+              <HStack >
+                <Image src="/star.svg"   w="12px"
+  h="12px"
+  bgImage="url('/img/star.png')"
+  bgSize="cover"
+  bgRepeat="no-repeat"
+
+  opacity={1} />
+                <Text fontSize="14px" color="#1A1A1A" fontWeight="bold">
+                  5.0
+                </Text>
+              </HStack>
+            </HStack>
+
+            <Text 
+  h="16px"
+  fontFamily="Helvetica Neue"
+  fontStyle="normal"
+  fontWeight="normal"
+  fontSize="14px"
+  lineHeight="16px"
+  letterSpacing="0px"
+  color="#7B7B7C"
+  textAlign="left"
+  opacity={1}>
+              @lolarend
+            </Text>
+
+            <HStack w="100%" justify="space-between" align="center" mt="6px">
+              <Text 
+fontSize="bold"  textAlign="left"fontFamily="Helvetica Neue"
+letterSpacing="0px;="
+color="#121826"
+opacity={1}>
+                69,00€
+              </Text>
+
+              <Box
+                w="60px"
+                h="40px"
+                borderRadius="20px"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+              >
+                <Image src="/icone-sac@2x.png" w="18px" h="18px"/>
+              </Box>
+            </HStack>
+          </VStack>
+        </Box>
+                  
+
         
         </Flex>
         

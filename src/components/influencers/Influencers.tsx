@@ -257,7 +257,8 @@ export default function Influenceurs() {
        <Box >
 
 
-        <Flex gap={4} justify={"center"} wrap="wrap" maxW="1200px" mx="auto" w="100%">
+        <Flex gap={4} justify={"center"} wrap="wrap"
+         maxW="1200px" mx="auto" w="100%">
 
 
 
@@ -457,7 +458,7 @@ export default function Influenceurs() {
         {/* Image + top section */}
         <Box position="relative" zIndex={2}>
           <Image
-            src="/31172.jpg"
+            src="/31172.png"
           w="268px"
           h="285px"
           objectFit="cover"
@@ -972,7 +973,7 @@ export default function Influenceurs() {
         {/* Image + top section */}
         <Box position="relative" zIndex={2}>
           <Image
-            src="/31172.jpg"
+            src="/31172.png"
           w="268px"
           h="285px"
           objectFit="cover"
