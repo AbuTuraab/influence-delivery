@@ -11,12 +11,169 @@ import {
   Portal,
   CloseButton,
   Icon,
- Link
+ Link,
+
 } from "@chakra-ui/react";
 import { Menu } from "lucide-react";
 import { CiHeart } from "react-icons/ci";
 import { TbMoneybag } from "react-icons/tb";
 
+
+
+
+const Demo = () => {
+
+  const cartItems = [
+    {
+      id: 1,
+      name: "Adidas Continental 80",
+      price: 69.0,
+      image: "/shoe.png",
+    },
+    {
+      id: 2,
+      name: "Nettoyant doux",
+      price: 69.0,
+      image:  "/215.png",
+    },
+    {
+      id: 3,
+      name: "Gourde sport",
+      price: 69.0,
+      image:  "/bot.png",
+    },
+  ];
+
+  const subtotal = cartItems.reduce((sum, item) => sum + item.price, 0);
+  const delivery = 5.99;
+  const total = subtotal + delivery;
+
+  return (
+     
+     
+    <Drawer.Root  size={"sm"} >
+      <Drawer.Trigger asChild >
+        <TbMoneybag />
+      </Drawer.Trigger>
+      <Portal >
+        <Drawer.Backdrop  />
+        <Drawer.Positioner  >
+          <Drawer.Content bgColor="white" color="black" borderRadius={"32px 0 0 32px"}>
+            <Drawer.Header>
+              <Drawer.Title>Panier</Drawer.Title>
+            </Drawer.Header>
+            <Drawer.Body >
+                     <Box>
+            {cartItems.map((item) => (
+              <Box key={item.id} pb={3} pt={3} borderBottom="1px solid #E5E5E5">
+                  <HStack>
+          <Image
+            src={item.image}
+            alt={item.name}
+            h="80px"
+            w="80px"
+            borderRadius="12px"
+            objectFit="cover"
+          />
+         <Box w="100%">
+          
+  <Flex justify="space-between">
+    <Text
+      fontSize="16px"
+      fontWeight="medium"
+      fontFamily="Helvetica Neue"
+    >
+      {item.name}
+    </Text>
+
+    <Text fontWeight="600">{item.price.toFixed(2)}€</Text>
+  </Flex>
+
+            <HStack>
+              <HStack
+                justify="space-around"
+                align="center"
+                h="32px"
+                w="87px"
+                bgColor="#F6F6F7"
+                borderRadius="24px"
+              >
+                <Image src="/line-.svg" h="2px" w="10px" />
+                <Text>1</Text>
+                <Image src="/add.png" h="26px" w="26px" />
+              </HStack>
+
+              <Box
+                bgColor="#F6F6F7"
+                h="32px"
+                w="32px"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                borderRadius="20px"
+              >
+                <Image src="/trash.svg" h="13.38px" w="14.72px" />
+              </Box>
+            </HStack>
+          </Box> 
+         
+        </HStack>
+              </Box>
+            ))}
+          </Box>
+ 
+          {/* Totals */}
+          <Box mt={4}>
+            <Flex justify="space-between">
+              <Text>Sous-total</Text>
+              <Text>{subtotal.toFixed(2)}€</Text>
+            </Flex>
+
+            <Flex justify="space-between">
+              <Text>Frais de livraison</Text>
+              <Text>{delivery.toFixed(2)}€</Text>
+            </Flex>
+
+          
+
+            <Flex justify="space-between">
+              <Text fontWeight="700">TOTAL</Text>
+              <Text fontWeight="700">{total.toFixed(2)}€</Text>
+            </Flex>
+          </Box>
+    
+
+        
+
+            </Drawer.Body>
+            <Drawer.Footer flexDirection="column" gap={3}>
+            <Link href="/cart" w="100%">
+              <Button w="100%" borderRadius="14px" bg="white" border="1px solid #E5E5E5">
+            Voir mon panier
+          </Button></Link>
+           
+          <Button
+            w="100%"
+            borderRadius="14px"
+            color="white"
+             bg="linear-gradient(270deg, #E13E85 0%, #7344E4 100%)"
+          >
+            Aller vers le paiement
+          </Button>
+            </Drawer.Footer>
+            <Drawer.CloseTrigger asChild>
+              <CloseButton   
+      fontWeight="bold"
+      fontFamily="Helvetica Neue" color="black"/>
+            </Drawer.CloseTrigger>
+          </Drawer.Content>
+        </Drawer.Positioner>
+      </Portal>
+    </Drawer.Root>
+
+     
+  )
+}
 
 const Logo = () => {
   return (
@@ -128,6 +285,7 @@ const MenuLinks = ({ isMobile = false }: { isMobile?: boolean }) => {
 const MobileDrawer = () => {
   const { open, onToggle } = useDisclosure();
 
+
   return (
     <Drawer.Root open={open} onOpenChange={onToggle} size="full">
       <Drawer.Trigger asChild>
@@ -159,6 +317,8 @@ const MobileDrawer = () => {
   );
 };
 export default function Navbar() {
+
+
   return (
     <>
       <Box
@@ -204,7 +364,9 @@ export default function Navbar() {
               <Link href="/favorites" variant={"plain"} color="white" >
           <CiHeart />
         </Link>
-              <TbMoneybag />
+            
+
+              <Demo />
             </HStack>
 
             <HStack display={{ base: "flex" }} gap="10">
